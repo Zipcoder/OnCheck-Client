@@ -29,17 +29,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
   })
 
   .state('app.tabs', {
     url: '/tabs',
     views: {
       'menuContent': {
-        templateUrl: 'templates/tabNav.html'
+        templateUrl: 'templates/tabNav.html',
+
       }
     }
   })
+
   .state('app.submit-tip', {
       url: '/submit-tip',
       views: {
@@ -65,5 +66,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
         }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/app/tabs');
 });

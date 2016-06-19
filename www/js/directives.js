@@ -35,9 +35,21 @@ angular.module('starter.directives', ['ionic'])
     templateUrl: 'templates/listResults.html'
   }
 })
-.directive('ng-browse', function(){
-  return{
+.directive('ngBrowse', function(){
+  return {
     restrict: 'E',
     templateUrl: 'templates/browse.html'
+  }
+})
+.directive('ngEats', function(){
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/myEats.html'
+  }
+})
+.directive('ngRoulette', function(){
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/roulette.html'
   }
 })
