@@ -53,3 +53,9 @@ angular.module('starter.directives', ['ionic'])
     templateUrl: 'templates/roulette.html'
   }
 })
+.directive('ngMapmini', function(){
+  return{
+    restrict: 'E',
+    templateUrl: 'templates/mapMini.html'
+  }
+})
