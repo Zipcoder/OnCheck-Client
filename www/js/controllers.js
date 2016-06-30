@@ -23,3 +23,10 @@ angular.module('starter.controllers', [])
   }
   init();
 })
+.controller('tipCtrl', function($scope, $http) {
+   submitTip = function(){
+     var url = "/tips";
+
+     $http.post
+   }
+})
