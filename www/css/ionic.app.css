@@ -26,6 +26,12 @@ $dark:                            #444 !default;
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
+@import url(www/css/bebasNeueThin.css);
+@import url(www/css/bebasNeueBold.css);
+@import url(www/css/bebasNeueBook.css);
+@import url(www/css/bebasNeueRegular.css);
+@import url(www/css/bebasNeueLight.css);
+@import url(www/css/LoraRegular.css);
 @font-face {
   font-family: "Ionicons";
   src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1");
@@ -9814,3 +9820,5 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+/*Ice Cream Powerful pallate*/
