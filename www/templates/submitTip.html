@@ -1,19 +1,45 @@
 <ion-view view-title="Submit Tip">
-  <ion-content class="padding has-footer">
-    <div class="list">
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Tip Description</span>
-          <textarea placeholder="Enter Description" rows="20" ng-model="tip.message"></textarea>
-        </label>
-    </div>
-    <input type = "file" file-model = "myFile"/>
+  <form action="localhost:8080/tips" method="post">
+    <ion-content class="padding has-footer">
 
-  </ion-content>
+      <input type="hidden" name="user_id" value="">
+      <input type="hidden" name="location_id" value="">
+
+      Tip Details:
+      <br>
+      <textarea name="message" placeholder="Enter a message" rows=20 cols=45 border="1px"></textarea>
+      <br>
+      Upload Image:
+      <br>
+      <input type="file" accept="image/*">
+
+    </ion-content>
 
   <ion-footer-bar class="bar-subfooter padding">
-    <button class="button button-block" on-tap="submitTip()">Submit</button>
+    <button class="button button-block" type="submit">Submit</button>
   </ion-footer-bar>
   <ion-footer-bar class="bar-footer padding">
-    <button class="button button-block" on-tap="clear()">Clear</button>
+    <button class="button button-block" type="reset">Clear</button>
   </ion-footer-bar>
+  </form>
 </ion-view>
+
+<!-- this is the old form, angularJS for http requests
+<ion-content class="padding has-footer">
+  <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Tip Description</span>
+        <textarea placeholder="Enter Description" rows="20" ng-model="tip.message"></textarea>
+      </label>
+  </div>
+  <input type = "file" file-model = "myFile"/>
+
+</ion-content>
+
+<ion-footer-bar class="bar-subfooter padding">
+  <button class="button button-block" on-tap="submitTip()">Submit</button>
+</ion-footer-bar>
+<ion-footer-bar class="bar-footer padding">
+  <button class="button button-block" on-tap="clear()">Clear</button>
+</ion-footer-bar>
+-->

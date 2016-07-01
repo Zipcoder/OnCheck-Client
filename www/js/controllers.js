@@ -43,14 +43,14 @@ angular.module('starter.controllers', [])
     console.log('file is ');
     console.dir(file);
 
-    var uploadUrl = "file:///users/wesleytraute/Downloads/";
-    evidence = uploadUrl+file.name;
+    var uploadUrl = "http://localhost:8080/evidence/";
+    console.log(uploadUrl+String(file));
 
     fileUpload.uploadFileToUrl(file, uploadUrl);
   };
 
   $scope.submitTip = function() {
-    var url = "localhost:8080/tips";
+    var url = "http://localhost:8080/tips";
     var tip =
     {
      "message" : $scope.tip.message,
@@ -58,6 +58,8 @@ angular.module('starter.controllers', [])
      "user_id" : "placeholder",
      "location_id" : "placeholder"
     };
+
+    console.log(evidence);
 
     $scope.uploadFile();
     $http.post(url, tip);
