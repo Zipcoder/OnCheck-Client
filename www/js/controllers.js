@@ -23,7 +23,7 @@ angular.module('starter.controllers', [])
   }
   init();
 })
-.controller('myEatsCtrl', function($scope, $state) {
+.controller('myEatsCtrl', function($scope) {
   $scope.restaurants = ["WacDonalds", "Burger Czar", "Dairy Despot", "Shit-Hole Denny's"];
   $scope.moveRestaurant = function(restaurant, fromIndex, toIndex) {
     //Move the item in the array
@@ -35,8 +35,5 @@ angular.module('starter.controllers', [])
   };
   $scope.addMyEatsRestaurant = function(restaurant_name) {
       $scope.restaurants.unshift(restaurant_name);
-  };
-  $scope.goToGlossary = function() {
-      $state.go('app.glossary');
   };
 })

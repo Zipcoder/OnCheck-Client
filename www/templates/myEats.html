@@ -4,9 +4,7 @@
   <ion-list ng-controller="myEatsCtrl" show-reorder="true" show-delete="shouldShowDelete">
       <ion-item ng-repeat="restaurant in restaurants">
           <ion-delete-button class="ion-minus-circled" ng-click="deleteMyEatsRestaurant($index)"></ion-delete-button>
-          <a on-tap="goToGlossary()">
-              {{restaurant}}
-          </a>
+          {{restaurant}}
           <ion-reorder-button class="ion-navicon" on-reorder="moveRestaurant(restaurant, $fromIndex, $toIndex)">
           </ion-reorder-button>
       </ion-item>
