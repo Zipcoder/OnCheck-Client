@@ -1,16 +1,19 @@
 <ion-view view-title="Submit Tip">
-  <ion-content class="padding">
+  <ion-content class="padding has-footer">
     <div class="list">
         <label class="item item-input item-stacked-label">
           <span class="input-label">Tip Description</span>
-          <textarea placeholder="Enter Description" rows="20"></textarea>
+          <textarea placeholder="Enter Description" rows="20" ng-model="tip.message"></textarea>
         </label>
     </div>
-    <button class="button button-block">
-      Upload Image
-    </button>
-    <button class="button button-block" align="bottom">
-      Submit
-    </button>
+    <input type = "file" file-model = "myFile"/>
+
   </ion-content>
+
+  <ion-footer-bar class="bar-subfooter padding">
+    <button class="button button-block" on-tap="submitTip()">Submit</button>
+  </ion-footer-bar>
+  <ion-footer-bar class="bar-footer padding">
+    <button class="button button-block" on-tap="clear()">Clear</button>
+  </ion-footer-bar>
 </ion-view>
