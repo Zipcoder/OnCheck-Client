@@ -23,8 +23,8 @@ angular.module('starter.controllers', [])
   }
   init();
 })
-.controller('myEatsCtrl', function($scope) {
-  $scope.restaurants = ["McDonalds", "KFC", "TacoBell", "Cafe Napoli", "Red Lobster", "Bruce's Crab Shack"];
+.controller('myEatsCtrl', function($scope, $state) {
+  $scope.restaurants = ["WacDonalds", "Burger Czar", "Dairy Despot", "Shit-Hole Denny's"];
   $scope.moveRestaurant = function(restaurant, fromIndex, toIndex) {
     //Move the item in the array
     $scope.restaurants.splice(fromIndex, 1);
@@ -32,5 +32,11 @@ angular.module('starter.controllers', [])
   };
   $scope.deleteMyEatsRestaurant = function(index) {
     $scope.restaurants.splice(index, 1);
+  };
+  $scope.addMyEatsRestaurant = function(restaurant_name) {
+      $scope.restaurants.unshift(restaurant_name);
+  };
+  $scope.goToGlossary = function() {
+      $state.go('app.glossary');
   };
 })

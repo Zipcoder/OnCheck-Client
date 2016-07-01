@@ -3,10 +3,12 @@
   <h1>My Eats</h1>
   <ion-list ng-controller="myEatsCtrl" show-reorder="true" show-delete="shouldShowDelete">
       <ion-item ng-repeat="restaurant in restaurants">
-        <ion-delete-button class="ion-minus-circled" ng-click="deleteMyEatsRestaurant($index)"></ion-delete-button>
-        {{restaurant}}
-        <ion-reorder-button class="ion-navicon" on-reorder="moveRestaurant(restaurant, $fromIndex, $toIndex)">
-        </ion-reorder-button>
+          <ion-delete-button class="ion-minus-circled" ng-click="deleteMyEatsRestaurant($index)"></ion-delete-button>
+          <a on-tap="goToGlossary()">
+              {{restaurant}}
+          </a>
+          <ion-reorder-button class="ion-navicon" on-reorder="moveRestaurant(restaurant, $fromIndex, $toIndex)">
+          </ion-reorder-button>
       </ion-item>
   </ion-list>
 <ion-toggle ng-model="shouldShowDelete">
