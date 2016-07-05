@@ -26,47 +26,6 @@ angular.module('starter.controllers', [])
 
 .controller('tipCtrl', function($scope, $http, fileUpload) {
 
-  /*var evidence;
-
-  $scope.tip = {
-    message: ''
-  };
-
-  $scope.clear = function() {
-    $scope.tip.message = '';
-    $scope.myFile = '';
-  };
-
-  $scope.uploadFile = function() {
-    var file = $scope.myFile;
-
-    console.log('file is ');
-    console.dir(file);
-
-    var uploadUrl = "http://localhost:8080/evidence/";
-    console.log(uploadUrl+String(file));
-
-    fileUpload.uploadFileToUrl(file, uploadUrl);
-  };
-
-  $scope.submitTip = function() {
-    var url = "http://localhost:8080/tips";
-    var tip =
-    {
-     "message" : $scope.tip.message,
-     "evidence" : evidence,
-     "user_id" : "placeholder",
-     "location_id" : "placeholder"
-    };
-
-    console.log(evidence);
-
-    $scope.uploadFile();
-    $http.post(url, tip);
-    $scope.clear();
-  };*/
-
-
   $scope.evidence;
 
   //Displays Image after Uploaded
@@ -86,7 +45,7 @@ angular.module('starter.controllers', [])
 
   $scope.uploadFile = function() {
     var file =  document.getElementById('picture').files[0];
-
+    var formData = JSON.stringify($("#form").serializeArray());
     console.log('file is ');
     console.dir(file);
 
