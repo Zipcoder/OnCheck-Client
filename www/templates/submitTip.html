@@ -2,44 +2,35 @@
   <form action="localhost:8080/tips" method="post">
     <ion-content class="padding has-footer">
 
-      <input type="hidden" name="user_id" value="">
-      <input type="hidden" name="location_id" value="">
+      <input type="hidden" name="user_id" value="5"/>
+      <input type="hidden" name="location_id" value="5"/>
+      <input type="hidden" name="evidence" value={{evidence}}/>
 
-      Tip Details:
+      <div align="center">
+        <h3 style="color:red;">Sample Restaurant</h3>
+        <p>123 NorthSouth St Wilmington DE 19801</p>
+      </div>
+
       <br>
-      <textarea name="message" placeholder="Enter a message" rows=20 cols=45 border="1px"></textarea>
+      <div align="center" style="border:1px solid black;">
+        <input type="file" accept="image/*" id="picture"/>
+        <img height=35% width=35% id="thumbnail"/>
+      </div>
+
       <br>
-      Upload Image:
-      <br>
-      <input type="file" accept="image/*">
+      <div align="center">
+        <h5>What would you like to report?</h5>
+
+      <textarea name="message" placeholder="Enter a message" rows=16 cols=45 style="border:1px solid black"></textarea>
+      </div>
 
     </ion-content>
 
-  <ion-footer-bar class="bar-subfooter padding">
-    <button class="button button-block" type="submit">Submit</button>
-  </ion-footer-bar>
-  <ion-footer-bar class="bar-footer padding">
-    <button class="button button-block" type="reset">Clear</button>
-  </ion-footer-bar>
+    <ion-footer-bar class="bar-subfooter padding">
+      <button class="button button-block" type="submit" on-tap="uploadFile()">Submit</button>
+    </ion-footer-bar>
+    <ion-footer-bar class="bar-footer padding">
+      <button class="button button-block" type="reset" on-tap="clear()">Clear</button>
+    </ion-footer-bar>
   </form>
 </ion-view>
-
-<!-- this is the old form, angularJS for http requests
-<ion-content class="padding has-footer">
-  <div class="list">
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Tip Description</span>
-        <textarea placeholder="Enter Description" rows="20" ng-model="tip.message"></textarea>
-      </label>
-  </div>
-  <input type = "file" file-model = "myFile"/>
-
-</ion-content>
-
-<ion-footer-bar class="bar-subfooter padding">
-  <button class="button button-block" on-tap="submitTip()">Submit</button>
-</ion-footer-bar>
-<ion-footer-bar class="bar-footer padding">
-  <button class="button button-block" on-tap="clear()">Clear</button>
-</ion-footer-bar>
--->
