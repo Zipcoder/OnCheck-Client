@@ -43,9 +43,12 @@ angular.module('starter.controllers', [])
     reader.readAsDataURL(this.files[0]);
   };
 
+  $scope.clear = function() {
+    document.getElementById("thumbnail").src = "";
+  };
+
   $scope.uploadFile = function() {
     var file =  document.getElementById('picture').files[0];
-    //var formData = JSON.stringify($("#form").serializeArray());
 
     console.log('file is ');
     console.dir(file);
@@ -53,11 +56,6 @@ angular.module('starter.controllers', [])
     var uploadUrl = "http://localhost:8080/evidence/";
 
     fileUpload.uploadFileToUrl(file, uploadUrl);
-    //$http.post("http://localhost:8080/tips", formData);
-  };
-
-  $scope.clear = function() {
-    document.getElementById("thumbnail").src = "";
   };
 
 })

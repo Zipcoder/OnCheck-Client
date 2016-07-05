@@ -1,5 +1,5 @@
 <ion-view view-title="Submit Tip">
-  <form action="http://localhost:8080/tips" target="_blank" method="post" accept-charset="utf-8" name="form">
+  <form action="http://localhost:8080/tips" target="success" method="post" accept-charset="utf-8" name="form">
     <ion-content class="padding has-footer">
 
       <input type="hidden" name="user_id" value="5"/>
@@ -23,7 +23,7 @@
 
       <textarea name="message" placeholder="Enter a message" rows=16 cols=45 style="border:1px solid black"></textarea>
       </div>
-
+      <iframe name="success" >You did it!</iframe>
     </ion-content>
 
     <ion-footer-bar class="bar-subfooter padding">
