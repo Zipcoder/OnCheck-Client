@@ -1,5 +1,5 @@
 <ion-view view-title="Submit Tip">
-  <form action="localhost:8080/tips" method="post">
+  <form action="http://localhost:8080/tips" target="_blank" method="post">
     <ion-content class="padding has-footer">
 
       <input type="hidden" name="user_id" value="5"/>
@@ -8,12 +8,12 @@
 
       <div align="center">
         <h3 style="color:red;">Sample Restaurant</h3>
-        <p>123 NorthSouth St Wilmington DE 19801</p>
+        <p>123 Walnut St Wilmington DE 19801</p>
       </div>
 
       <br>
       <div align="center" style="border:1px solid black;">
-        <input type="file" accept="image/*" id="picture"/>
+        <input type="file" accept="image/*" id="picture" file-mode="myFile"/>
         <img height=35% width=35% id="thumbnail"/>
       </div>
 
@@ -34,3 +34,24 @@
     </ion-footer-bar>
   </form>
 </ion-view>
+
+<!-- this is the old form, angularJS for http requests
+
+<ion-content class="padding has-footer">
+  <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Tip Description</span>
+        <textarea placeholder="Enter Description" rows="20" ng-model="tip.message"></textarea>
+      </label>
+  </div>
+  <input type = "file" file-model = "myFile"/>
+
+</ion-content>
+
+<ion-footer-bar class="bar-subfooter padding">
+  <button class="button button-block" on-tap="submitTip()">Submit</button>
+</ion-footer-bar>
+<ion-footer-bar class="bar-footer padding">
+  <button class="button button-block" on-tap="clear()">Clear</button>
+</ion-footer-bar>
+-->
