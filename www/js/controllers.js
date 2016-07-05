@@ -33,8 +33,18 @@ angular.module('starter.controllers', [])
   $scope.deleteMyEatsRestaurant = function(index) {
     $scope.restaurants.splice(index, 1);
   };
-  $scope.addMyEatsRestaurant = function() {
-      restaurant = prompt("What is the restaurant's name?")
-      $scope.restaurants.unshift(restaurant);
+  $scope.addMyEatsRestaurant = function(restaurant_name) {
+      $scope.restaurants.unshift(restaurant_name);
   };
+})
+.controller('localStorageCtrl', function($scope) {
+    $scope.setLogin = function(user, password) {
+        window.localStorage.setItem(user, password);
+    };
+    $scope.getLogin = function(user) {
+        return window.localStorage.getItem(user);
+    };
+    $scope.setMyEats = function(list) {
+        window.localStorage.setItem("myEatsList", list);
+    }
 })
