@@ -45,13 +45,15 @@ angular.module('starter.controllers', [])
 
   $scope.uploadFile = function() {
     var file =  document.getElementById('picture').files[0];
-    var formData = JSON.stringify($("#form").serializeArray());
+    //var formData = JSON.stringify($("#form").serializeArray());
+
     console.log('file is ');
     console.dir(file);
 
     var uploadUrl = "http://localhost:8080/evidence/";
 
     fileUpload.uploadFileToUrl(file, uploadUrl);
+    //$http.post("http://localhost:8080/tips", formData);
   };
 
   $scope.clear = function() {
