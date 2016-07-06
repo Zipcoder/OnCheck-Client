@@ -1,25 +1,18 @@
-Ionic App Base
-=====================
+## Synopsis
 
-A starting project for Ionic that optionally supports using custom SCSS.
+OnCheck is an app that combines the networking power of social media, the ability to search for your favorite restaurants in Delaware, and years of inspection data into a powerful source for good - for your stomach and your peace of mind.
 
-## Using this project
+## Motivation
 
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+We found that, while you can see what people think of restaurants in your area, most review apps or websites don't provide any baseline for their users or use the data that is provided by the State of Delaware for the benefit of users. We wanted to fill that gap. 
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+## License
 
-```bash
-$ npm install -g ionic
-```
+The MIT License (MIT)
+Copyright (c) 2016 Zip Code Wilmington
 
-Then run: 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files for OnCheck, to deal in OnCheck without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom OnCheck is furnished to do so, subject to the following conditions:
 
-```bash
-$ ionic start myProject tabs
-```
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
-
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+ONCHECK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
