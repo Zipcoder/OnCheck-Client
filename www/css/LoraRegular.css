@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'LoraRegular';
+    src: url('fonts/LoraRegular.eot');
+    src: url('fonts/LoraRegular.eot') format('embedded-opentype'),
+         url('fonts/LoraRegular.woff2') format('woff2'),
+         url('fonts/LoraRegular.woff') format('woff'),
+         url('fonts/LoraRegular.ttf') format('truetype'),
+         url('fonts/LoraRegular.svg#LoraRegular') format('svg');
+}
