@@ -33,8 +33,9 @@ angular.module('starter.controllers', [])
   $scope.deleteMyEatsRestaurant = function(index) {
     $scope.restaurants.splice(index, 1);
   };
-  $scope.addMyEatsRestaurant = function(restaurant_name) {
-      $scope.restaurants.unshift(restaurant_name);
+  $scope.addMyEatsRestaurant = function(restaurant) {
+      $scope.restaurants.unshift(restaurant);
+      console.log($scope.restaurants);
   };
 })
 .controller('localStorageCtrl', function($scope) {
