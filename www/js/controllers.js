@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
   init();
 })
 .controller('myEatsCtrl', function($scope) {
-  $scope.restaurants = ["Cafe Napoli", "Ole Tapas", "Joe's Crab Shack", "Chelsea's Tavern"];
+  $scope.restaurants = ["Taco Hell", "WacDonalds", "Dairy Despot", "Burger Czar", "Shit-Hole Denny's"];
   $scope.addMyEatsRestaurant = function(restaurant) {
       $scope.restaurants.unshift(restaurant);
       console.log($scope.restaurants);
@@ -48,4 +48,36 @@ angular.module('starter.controllers', [])
     $scope.setMyEats = function(list) {
         window.localStorage.setItem("myEatsList", list);
     }
+})
+
+.controller('tipCtrl', function($scope, $http, fileUpload) {
+
+  $scope.evidence;
+
+  //Displays Image after Uploaded
+  document.getElementById("picture").onchange = function () {
+    document.getElementById("evidence").value = document.getElementById('picture').files[0].name;
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+        document.getElementById("thumbnail").src = e.target.result;
+    };
+    // read the image file as a data URL.
+    reader.readAsDataURL(this.files[0]);
+  };
+
+  $scope.clear = function() {
+    document.getElementById("thumbnail").src = "";
+  };
+
+  $scope.uploadFile = function() {
+    var file =  document.getElementById('picture').files[0];
+
+    console.log('file is ');
+    console.dir(file);
+
+    var uploadUrl = "http://localhost:8080/evidence/";
+
+    fileUpload.uploadFileToUrl(file, uploadUrl);
+  };
 })
