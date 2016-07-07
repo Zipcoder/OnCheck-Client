@@ -1,5 +1,36 @@
-<ion-view view-title="submit-tip">
-  <ion-content class="padding">
-    <h1>Submit Tip</h1>
-  </ion-content>
+<ion-view view-title="Submit Tip">
+  <form action="http://localhost:8080/tips" target="success" method="post" accept-charset="utf-8" name="form">
+    <ion-content class="padding has-footer">
+
+      <input type="hidden" name="user_id" value=1/>
+      <input type="hidden" name="location_id" value=1/>
+      <input type="hidden" name="evidence" value={{evidence}}/>
+
+      <div align="center">
+        <h3 style="color:red;">Sample Restaurant</h3>
+        <p>123 Walnut St Wilmington DE 19801</p>
+      </div>
+
+      <br>
+      <div align="center" style="border:1px solid black;">
+        <input type="file" accept="image/*" id="picture" file-mode="myFile"/>
+        <img height=35% width=35% id="thumbnail"/>
+      </div>
+
+      <br>
+      <div align="center">
+        <h5>What would you like to report?</h5>
+
+      <textarea name="message" placeholder="Enter a message" rows=16 cols=45 style="border:1px solid black"></textarea>
+      </div>
+      <iframe name="success" >You did it!</iframe>
+    </ion-content>
+
+    <ion-footer-bar class="bar-subfooter padding">
+      <button class="button button-block" type="submit" on-tap="uploadFile()">Submit</button>
+    </ion-footer-bar>
+    <ion-footer-bar class="bar-footer padding">
+      <button class="button button-block" type="reset" on-tap="clear()">Clear</button>
+    </ion-footer-bar>
+  </form>
 </ion-view>

@@ -45,7 +45,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
       url: '/submit-tip',
       views: {
         'menuContent': {
-          templateUrl: 'templates/submitTip.html'
+          templateUrl: 'templates/submitTip.html',
+          controller: 'tipCtrl'
         }
       }
     })
