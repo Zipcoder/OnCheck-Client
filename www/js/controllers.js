@@ -24,17 +24,18 @@ angular.module('starter.controllers', [])
   init();
 })
 .controller('myEatsCtrl', function($scope) {
-  $scope.restaurants = ["WacDonalds", "Burger Czar", "Dairy Despot", "Shit-Hole Denny's"];
-  $scope.moveRestaurant = function(restaurant, fromIndex, toIndex) {
-    //Move the item in the array
-    $scope.restaurants.splice(fromIndex, 1);
-    $scope.restaurants.splice(toIndex, 0, restaurant);
+  $scope.restaurants = ["Cafe Napoli", "Ole Tapas", "Joe's Crab Shack", "Chelsea's Tavern"];
+  $scope.addMyEatsRestaurant = function(restaurant) {
+      $scope.restaurants.unshift(restaurant);
+      console.log($scope.restaurants);
   };
   $scope.deleteMyEatsRestaurant = function(index) {
     $scope.restaurants.splice(index, 1);
   };
-  $scope.addMyEatsRestaurant = function(restaurant_name) {
-      $scope.restaurants.unshift(restaurant_name);
+  $scope.moveRestaurant = function(restaurant, fromIndex, toIndex) {
+    //Move the item in the array
+    $scope.restaurants.splice(fromIndex, 1);
+    $scope.restaurants.splice(toIndex, 0, restaurant);
   };
 })
 .controller('localStorageCtrl', function($scope) {

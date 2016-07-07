@@ -1,15 +1,17 @@
-<ion-content>
-  <br><br>
-  <h1>My Eats</h1>
-  <ion-list ng-controller="myEatsCtrl" show-reorder="true" show-delete="shouldShowDelete">
-      <ion-item ng-repeat="restaurant in restaurants">
-          <ion-delete-button class="ion-minus-circled" ng-click="deleteMyEatsRestaurant($index)"></ion-delete-button>
-          {{restaurant}}
-          <ion-reorder-button class="ion-navicon" on-reorder="moveRestaurant(restaurant, $fromIndex, $toIndex)">
-          </ion-reorder-button>
-      </ion-item>
-  </ion-list>
-<ion-toggle ng-model="shouldShowDelete">
-  Show Delete?
-</ion-toggle>
-</ion-content>
+<ion-view title="myEats">
+    <ion-content>
+        <br><br>
+        <h1>My Eats</h1>
+        <ion-list ng-controller="myEatsCtrl" show-reorder="true" show-delete="shouldShowDelete">
+            <ion-item ng-repeat="restaurant in restaurants">
+                <ion-delete-button class="ion-minus-circled" ng-click="deleteMyEatsRestaurant($index)"></ion-delete-button>
+                {{restaurant}}
+                <ion-reorder-button class="ion-navicon" on-reorder="moveRestaurant(restaurant, $fromIndex, $toIndex)">
+                </ion-reorder-button>
+            </ion-item>
+        </ion-list>
+        <ion-toggle ng-model="shouldShowDelete">
+          Show Delete?
+        </ion-toggle>
+    </ion-content>
+</ion-view>
