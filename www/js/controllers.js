@@ -23,6 +23,32 @@ angular.module('starter.controllers', [])
   }
   init();
 })
+.controller('myEatsCtrl', function($scope) {
+  $scope.restaurants = ["Taco Hell", "WacDonalds", "Dairy Despot", "Burger Czar", "Shit-Hole Denny's"];
+  $scope.addMyEatsRestaurant = function(restaurant) {
+      $scope.restaurants.unshift(restaurant);
+      console.log($scope.restaurants);
+  };
+  $scope.deleteMyEatsRestaurant = function(index) {
+    $scope.restaurants.splice(index, 1);
+  };
+  $scope.moveRestaurant = function(restaurant, fromIndex, toIndex) {
+    //Move the item in the array
+    $scope.restaurants.splice(fromIndex, 1);
+    $scope.restaurants.splice(toIndex, 0, restaurant);
+  };
+})
+.controller('localStorageCtrl', function($scope) {
+    $scope.setLogin = function(user, password) {
+        window.localStorage.setItem(user, password);
+    };
+    $scope.getLogin = function(user) {
+        return window.localStorage.getItem(user);
+    };
+    $scope.setMyEats = function(list) {
+        window.localStorage.setItem("myEatsList", list);
+    }
+})
 
 .controller('tipCtrl', function($scope, $http, fileUpload) {
 
@@ -54,5 +80,4 @@ angular.module('starter.controllers', [])
 
     fileUpload.uploadFileToUrl(file, uploadUrl);
   };
-
 })
