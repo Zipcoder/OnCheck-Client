@@ -2,13 +2,9 @@
   <form action="http://localhost:8080/tips" target="success" method="post" accept-charset="utf-8" name="form">
     <ion-content class="padding has-footer">
 
-      <input type="hidden" name="user_id" value=1/>
-      <input type="hidden" name="location_id" value=1/>
-      <input type="hidden" name="evidence" value={{evidence}}/>
-
       <div align="center">
-        <h3 style="color:red;">Sample Restaurant</h3>
-        <p>123 Walnut St Wilmington DE 19801</p>
+        <h3 style="color:red;">Bobs Burgers</h3>
+        <p>conveniently located on Ocean Avenue</p>
       </div>
 
       <br>
@@ -23,6 +19,11 @@
 
       <textarea name="message" placeholder="Enter a message" rows=16 cols=45 style="border:1px solid black"></textarea>
       </div>
+
+      <input type="hidden" name="evidence" id="evidence"/>
+      <input type="hidden" name="userid" value=1/>
+      <input type="hidden" name="locationid" value="Bobs Burgers"/>
+
       <iframe name="success" >You did it!</iframe>
     </ion-content>
 
