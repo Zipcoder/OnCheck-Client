@@ -1,0 +1,19 @@
+
+.tab-nav.tabs{
+
+  background-color: $whitespace;
+  color:$base;
+
+
+}
+.tabs-positive > .tabs, .tabs.tabs-positive{
+
+  background-image: none;
+}
+a.tab-item{
+  border-top: 1px solid $secondary;
+}
+a.tab-item-active{
+  border-top: 1px solid $CTA;
+  color: $CTA;
+}
