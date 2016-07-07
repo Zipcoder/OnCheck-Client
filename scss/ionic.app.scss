@@ -20,9 +20,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 // include colors here
+
 @import "scss/partials/colors/iceCreamPowerful";
-
-
+// sizing and spacing
+@import "scss/partials/sizes/sizes.scss";
 @import "scss/partials/components/tabNav.scss";
 //fonts
 @font-face {

@@ -9824,11 +9824,20 @@ a.button {
   background-image: none; }
 
 a.tab-item {
-  border-top: 1px solid #17607d; }
+  border-top: 1px solid #17607d;
+  font-family: BebasNeueBook;
+  padding-top: 10px; }
 
 a.tab-item-active {
-  border-top: 1px solid #38fffe;
+  border-top: 3px solid #38fffe;
   color: #38fffe; }
+
+.tab-title {
+  font-size: 20px; }
+
+.tab-item .icon {
+  display: inline-block;
+  font-size: 20px; }
 
 @font-face {
   font-family: 'BebasNeueBook';
