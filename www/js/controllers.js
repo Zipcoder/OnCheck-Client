@@ -24,8 +24,9 @@ angular.module('starter.controllers', [])
   init();
 })
 .controller('myEatsCtrl', function($scope) {
-  $scope.restaurants = ["Taco Hell", "WacDonalds", "Dairy Despot", "Burger Czar", "Shit-Hole Denny's"];
-  $scope.addMyEatsRestaurant = function(restaurant) {
+  $scope.restaurants = ["McDonalds", "Cafe Napoli", "Wendy's", "Ole Tapas", "Shenanigan's"];
+  $scope.addMyEatsRestaurant = function() {
+      var restaurant = prompt("What restaurant?")
       $scope.restaurants.unshift(restaurant);
       console.log($scope.restaurants);
   };
@@ -49,7 +50,19 @@ angular.module('starter.controllers', [])
         window.localStorage.setItem("myEatsList", list);
     }
 })
-
+.controller('rouletteCtrl', function($scope, $http) {
+    $scope.city = "";
+    $scope.roulette = function() {
+        var display = document.getElementById("generatedRestaurant");
+        $http.get("http://localhost:8080/restaurants/searchByCity/"+$scope.city).then(function(response) {
+            var max = response.data.length;
+            var number =  Math.floor(Math.random() * (max-1) + 1);
+            console.log(number);
+            console.log(response.data[number]);
+            $scope.restaurant = response.data[number];
+        })
+    }
+})
 .controller('tipCtrl', function($scope, $http, fileUpload) {
 
   $scope.evidence;
