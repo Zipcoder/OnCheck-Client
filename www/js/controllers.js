@@ -57,6 +57,8 @@ angular.module('starter.controllers', [])
   //Displays Image after Uploaded
   document.getElementById("picture").onchange = function () {
     document.getElementById("evidence").value = document.getElementById('picture').files[0].name;
+    //document.getElementById("userid").value = 1;
+    //document.getElementById("locationid").value = "Derp";
     var reader = new FileReader();
 
     reader.onload = function (e) {
@@ -80,4 +82,13 @@ angular.module('starter.controllers', [])
 
     fileUpload.uploadFileToUrl(file, uploadUrl);
   };
+})
+
+.controller('userTipsCtrl', function($scope, $http) {
+  $scope.userTips;
+  var userId = "5";
+  var userTipsURL = "http://localhost:8080/tips";
+  $http.get(userTipsURL).success(function(response) {
+    $scope.userTips = response.data;
+  });
 })
