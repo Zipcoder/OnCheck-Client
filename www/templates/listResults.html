@@ -1,4 +1,116 @@
-<ion-content>
-<ng-header></ng-header>
-<p>list results tab</p>
-</ion-content>
+<ion-view>
+    <ion-content ng-controller="listCtrl">
+        <ng-header></ng-header>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                What City?
+            </div>
+            <select ng-model="city">
+                <option>
+                  Arden
+                </option>
+                <option>
+                  Bear
+                </option>
+                <option>
+                  Bethany Beach
+                </option>
+                <option>
+                  Camden
+                </option>
+                <option>
+                  Cheswold
+                </option>
+                <option>
+                  Claymont
+                </option>
+                <option>
+                  Delaware City
+                </option>
+                <option>
+                  Dewey Beach
+                </option>
+                <option>
+                  Dover
+                </option>
+                <option>
+                  Elsemere
+                </option>
+                <option>
+                  Frankford
+                </option>
+                <option>
+                  Georgetown
+                </option>
+                <option>
+                  Greenwood
+                </option>
+                <option>
+                  Glasgow
+                </option>
+                <option>
+                  Harbeson
+                </option>
+                <option>
+                  Hartly
+                </option>
+                <option>
+                  Hockessin
+                </option>
+                <option>
+                  Harrington
+                </option>
+                <option>
+                  Laurel
+                </option>
+                <option>
+                  Lewes
+                </option>
+                <option>
+                  Middletown
+                </option>
+                <option>
+                  Milford
+                </option>
+                <option>
+                  Millsboro
+                </option>
+                <option>
+                  New Castle
+                </option>
+                <option>
+                  Newark
+                </option>
+                <option>
+                  Newport
+                </option>
+                <option>
+                  Port Penn
+                </option>
+                <option>
+                  Rehoboth Beach
+                </option>
+                <option>
+                  Selbyville
+                </option>
+                <option>
+                  Seaford
+                </option>
+                <option>
+                  Smyrna
+                </option>
+                <option>
+                  Wilmington
+                </option>
+            </select>
+        </label>
+        <button class="button button-block button-balanced" ng-click="generateList()">
+            Find Restaurant
+        </button>
+        <ion-list>
+            <ion-item class="button button-block button-stable" ng-repeat="restaurant in restaurants">
+                {{restaurant.restaurantName}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

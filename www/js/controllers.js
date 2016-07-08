@@ -50,15 +50,21 @@ angular.module('starter.controllers', [])
         window.localStorage.setItem("myEatsList", list);
     }
 })
+.controller('listCtrl', function($scope, $http) {
+    $scope.city = "";
+    $scope.generateList = function() {
+        $http.get("http://localhost:8080/restaurants/searchByCity/"+$scope.city).then(function(response) {
+            console.log(response.data)
+            $scope.restaurants = response.data;
+        })
+    }
+})
 .controller('rouletteCtrl', function($scope, $http) {
     $scope.city = "";
     $scope.roulette = function() {
-        var display = document.getElementById("generatedRestaurant");
         $http.get("http://localhost:8080/restaurants/searchByCity/"+$scope.city).then(function(response) {
             var max = response.data.length;
             var number =  Math.floor(Math.random() * (max-1) + 1);
-            console.log(number);
-            console.log(response.data[number]);
             $scope.restaurant = response.data[number];
         })
     }
