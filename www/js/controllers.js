@@ -1,10 +1,43 @@
 angular.module('starter.controllers', [])
-.controller('browseCtrl', function($scope){
-  init = function(){
-    console.log("browse");
+.controller('browseCtrl', function($scope, $cordovaGeolocation){
+
+    function mapInit(coords){
+      var mapOptions = {
+        center: { lat: coords.latitude, lng: coords.longitude},
+        zoom: 14
+      };
+      $scope.map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+    }
+  
+    var posOptions = {timeout: 10000, enableHighAccuracy: true};
+    $cordovaGeolocation.getCurrentPosition(posOptions)
+    .then(function(position){
+      $scope.coords = position.coords;
+      mapInit(position.coords);
+      locate(position.coords);
+    }, function(err) {
+      console.log("Could not get current position.");
+    });
+
+    function locate(coords){
+    var marker = new google.maps.Marker({
+      map: $scope.map,
+      animation: google.maps.Animation.DROP,
+      position: {lat: coords.latitude, lng: coords.longitude}
+    });      
+ 
+    var infoWindow = new google.maps.InfoWindow({
+      content: "You are here!"
+    });
+ 
+    google.maps.event.addListener(marker, 'click', function () {
+      infoWindow.open($scope.map, marker);
+    });
   }
-  init();
+
 })
+
 .controller('listResultsCtrl', function($scope){
   init = function(){
     console.log("list");
