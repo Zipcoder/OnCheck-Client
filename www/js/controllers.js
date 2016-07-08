@@ -24,8 +24,9 @@ angular.module('starter.controllers', [])
   init();
 })
 .controller('myEatsCtrl', function($scope) {
-  $scope.restaurants = ["Taco Hell", "WacDonalds", "Dairy Despot", "Burger Czar", "Shit-Hole Denny's"];
-  $scope.addMyEatsRestaurant = function(restaurant) {
+  $scope.restaurants = ["McDonalds", "Cafe Napoli", "Wendy's", "Ole Tapas", "Shenanigan's"];
+  $scope.addMyEatsRestaurant = function() {
+      var restaurant = prompt("What restaurant?")
       $scope.restaurants.unshift(restaurant);
       console.log($scope.restaurants);
   };

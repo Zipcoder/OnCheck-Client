@@ -1,6 +1,20 @@
 <ion-view>
-<br>
-<br>
-<h1>this is not a roulette</h1>
-<p>it is just a tribute</p>
+    <ion-content class="has-header">
+        <h1>this is not a roulette</h1>
+        <p>it is just a tribute</p>
+        <div class="dropown">
+            <button ng-click="rouletteDropDown()" class="dropbtn button button-block">
+                Distance
+            </button>
+            <div id="rouleteDropDown" class="dropdown-content">
+                <a href="#">0-5 Miles</a>
+                <a href="#">6-10 Miles</a>
+                <a href="#">11-20 Miles</a>
+                <a href="#">21-30 Miles</a>
+            </div>
+        </div>
+        <button class="button button-full button-assertive">
+            Help Me Choose!
+        </button>
+    </ion-content>
 </ion-view>
