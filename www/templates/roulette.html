@@ -1,20 +1,120 @@
-<ion-view>
-    <ion-content class="has-header">
-        <h1>this is not a roulette</h1>
-        <p>it is just a tribute</p>
-        <div class="dropown">
-            <button ng-click="rouletteDropDown()" class="dropbtn button button-block">
-                Distance
-            </button>
-            <div id="rouleteDropDown" class="dropdown-content">
-                <a href="#">0-5 Miles</a>
-                <a href="#">6-10 Miles</a>
-                <a href="#">11-20 Miles</a>
-                <a href="#">21-30 Miles</a>
-            </div>
+<ion-view view-title="onCheck Roulette">
+    <ion-content class="has-header" ng-controller="rouletteCtrl">
+        <div>
+            <p>
+                Welcome to onCheck Roulette, where we'll help you find a new and interesting place to eat. <br>Enter a city you'd like to check out and press "Let's Go!"
+            </p>
         </div>
-        <button class="button button-full button-assertive">
-            Help Me Choose!
+        <label class="item item-input item-select">
+            <div class="input-label">
+                What City?
+            </div>
+            <select ng-model="city">
+                <option>
+                  Arden
+                </option>
+                <option>
+                  Bear
+                </option>
+                <option>
+                  Bethany Beach
+                </option>
+                <option>
+                  Camden
+                </option>
+                <option>
+                  Cheswold
+                </option>
+                <option>
+                  Claymont
+                </option>
+                <option>
+                  Delaware City
+                </option>
+                <option>
+                  Dewey Beach
+                </option>
+                <option>
+                  Dover
+                </option>
+                <option>
+                  Elsemere
+                </option>
+                <option>
+                  Frankford
+                </option>
+                <option>
+                  Georgetown
+                </option>
+                <option>
+                  Greenwood
+                </option>
+                <option>
+                  Glasgow
+                </option>
+                <option>
+                  Harbeson
+                </option>
+                <option>
+                  Hartly
+                </option>
+                <option>
+                  Hockessin
+                </option>
+                <option>
+                  Harrington
+                </option>
+                <option>
+                  Laurel
+                </option>
+                <option>
+                  Lewes
+                </option>
+                <option>
+                  Middletown
+                </option>
+                <option>
+                  Milford
+                </option>
+                <option>
+                  Millsboro
+                </option>
+                <option>
+                  New Castle
+                </option>
+                <option>
+                  Newark
+                </option>
+                <option>
+                  Newport
+                </option>
+                <option>
+                  Port Penn
+                </option>
+                <option>
+                  Rehoboth Beach
+                </option>
+                <option>
+                  Selbyville
+                </option>
+                <option>
+                  Seaford
+                </option>
+                <option>
+                  Smyrna
+                </option>
+                <option>
+                  Wilmington
+                </option>
+            </select>
+        </label>
+        <button class="button button-block button-balanced" ng-click="roulette()">
+            Let's Go!
         </button>
+        <div>
+            {{restaurant.restaurantName}}
+            <br>
+            {{restaurant.restaurantAddress}}
+        </div>
     </ion-content>
 </ion-view>
