@@ -52,12 +52,21 @@ angular.module('starter.controllers', [])
 })
 .controller('listCtrl', function($scope, $http) {
     $scope.city = "";
+    $scope.zip = "";
     $scope.generateList = function() {
-        $http.get("http://localhost:8080/restaurants/searchByCity/"+$scope.city).then(function(response) {
-            console.log(response.data)
-            $scope.restaurants = response.data;
-        })
+        if($scope.city == "") {
+            $http.get("http://localhost:8080/restaurants/searchByZip/"+$scope.zip).then(function(response) {
+                console.log(response.data)
+                $scope.restaurants = response.data;
+            })
+        } else {
+            $http.get("http://localhost:8080/restaurants/searchByCity/"+$scope.city).then(function(response) {
+                console.log(response.data)
+                $scope.restaurants = response.data;
+            })
+        }
     }
+
 })
 .controller('rouletteCtrl', function($scope, $http) {
     $scope.city = "";
