@@ -53,7 +53,16 @@ angular.module('starter.controllers', [])
 .controller('tipCtrl', function($scope, $http, fileUpload) {
 
   $scope.evidence;
+  $scope.restaurantInfo = [];
+  var location_id= "Mike's Crab Trap (S150790)32368 Long Neck Rd.";
 
+  var restaurantSearchURL = "http://localhost:8080/restaurants/searchById/";
+
+  $http.get(restaurantSearchURL+location_id).then(function(response) {
+    $scope.restaurantInfo = response.data;
+      console.log($scope.restaurantInfo);
+  });
+  console.log($scope.restaurantInfo);
   //Displays Image after Uploaded
   document.getElementById("picture").onchange = function () {
     document.getElementById("evidence").value = document.getElementById('picture').files[0].name;
@@ -85,10 +94,17 @@ angular.module('starter.controllers', [])
 })
 
 .controller('userTipsCtrl', function($scope, $http) {
-  $scope.userTips;
-  var userId = "5";
-  var userTipsURL = "http://localhost:8080/tips";
-  $http.get(userTipsURL).success(function(response) {
+  $scope.userTips = [];
+  $scope.tipRestaurantInfo = [];
+  var restaurantSearchURL = "http://localhost:8080/restaurants/searchById/";
+  var userId = "55";
+  var userTipsURL = "http://localhost:8080/tips/"+userId;
+  $http.get(userTipsURL).then(function(response) {
     $scope.userTips = response.data;
   });
+
+  $http.get(restaurantSearchURL+userTips.location_id).then(function(response) {
+    $scope.tipRestaurantInfo = response.data;
+  });
+
 })
