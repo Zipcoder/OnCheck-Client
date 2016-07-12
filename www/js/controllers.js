@@ -45,7 +45,7 @@ angular.module('starter.controllers', [])
     });
   }
     //Geocode 
-  var address ="201 E Delilah Rd Pleasantville, NJ"; //Test address
+  var address ="218 W Market St, Wilmington, DE 19804"; //Test address
   $scope.geodata = {};
   $scope.queryResults = {};
   $scope.queryError = {};
