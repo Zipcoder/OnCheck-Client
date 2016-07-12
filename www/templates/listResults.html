@@ -1,6 +1,7 @@
 <ion-view>
     <ion-content ng-controller="listCtrl">
-        <ng-header></ng-header>
+      <header class="col">Results</header>
+      <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
         <p style="text-align: center">
             Choose a City or Zipcode.
         </p>
@@ -249,5 +250,12 @@
                 {{restaurant.restaurantName}}, {{restaurant.restaurantAddress}}
             </ion-item>
         </ion-list>
+
+        <ng-Restaurantcard></ng-Restaurantcard>
+        <ng-Restaurantcard></ng-Restaurantcard>
+        <ng-Restaurantcard></ng-Restaurantcard>
+        <ng-Restaurantcard></ng-Restaurantcard>
+        <ng-Restaurantcard></ng-Restaurantcard>
+        <ng-Restaurantcard></ng-Restaurantcard>
     </ion-content>
 </ion-view>

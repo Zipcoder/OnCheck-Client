@@ -14,7 +14,7 @@ $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
-*/
+ion*/
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -26,12 +26,6 @@ $dark:                            #444 !default;
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
-@import url(www/css/bebasNeueThin.css);
-@import url(www/css/bebasNeueBold.css);
-@import url(www/css/bebasNeueBook.css);
-@import url(www/css/bebasNeueRegular.css);
-@import url(www/css/bebasNeueLight.css);
-@import url(www/css/LoraRegular.css);
 @font-face {
   font-family: "Ionicons";
   src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1");
@@ -9822,3 +9816,160 @@ a.button {
   transition-duration: 0s; }
 
 /*Ice Cream Powerful pallate*/
+.tab-nav.tabs {
+  background-color: #fff;
+  color: #717f7f; }
+
+.tabs-positive > .tabs, .tabs.tabs-positive {
+  background-image: none; }
+
+a.tab-item {
+  border-top: 1px solid #17607d;
+  font-family: BebasNeueBook;
+  padding-top: 10px; }
+
+a.tab-item-active {
+  border-top: 3px solid #38fffe;
+  color: #38fffe; }
+
+.tab-title {
+  font-size: 20px; }
+
+.tab-item .icon {
+  display: inline-block;
+  font-size: 20px; }
+
+.search-bar {
+  padding: 10px 20px;
+  background: rgba(113, 127, 127, 0.62);
+  position: relative;
+  z-index: 3;
+  top: 30px; }
+  .search-bar input {
+    font-family: BebasNeueBook;
+    letter-spacing: 2px;
+    color: #38fffe;
+    border-bottom: 1px solid #38fffe;
+    background: none;
+    width: 90%; }
+
+.item.item-avatar img {
+  border-radius: 0px; }
+
+.list.card {
+  box-shadow: none;
+  border: 1px solid #717f7f;
+  margin: 5px 10px;
+  font-family: bebasNeueBook;
+  letter-spacing: 1px; }
+  .list.card:last-child {
+    margin-bottom: 10px; }
+  .list.card h2 {
+    font-family: bebasNeueBook;
+    color: #17607d;
+    font-size: 20px; }
+  .list.card .hours {
+    color: #d24d57; }
+  .list.card .miles {
+    display: inline;
+    padding-left: 40px; }
+  .list.card .sub-head {
+    display: inline; }
+
+h2 {
+  color: #d24d57;
+  font-family: bebasNeueBook;
+  margin-bottom: 0px; }
+
+input#picture {
+  display: inline-block;
+  width: 100%;
+  padding: 120px 0 0 0;
+  height: 100px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../img/camera_icon.svg") center center no-repeat transparent;
+  border-radius: 20px;
+  background-size: 150px 100px; }
+
+img#thumbnail {
+  margin: auto;
+  display: block; }
+
+i.icon.marker-warn.ion-ios-location {
+  color: #d24d57; }
+
+i.icon.marker-warn.ion-ios-location, p.location {
+  font-family: bebasNeueBook;
+  font-size: 20px; }
+
+@font-face {
+  font-family: 'BebasNeueBook';
+  src: url("fonts/BebasNeueBook.eot");
+  src: url("fonts/BebasNeueBook.eot") format("embedded-opentype"), url("fonts/BebasNeueBook.woff2") format("woff2"), url("fonts/BebasNeueBook.woff") format("woff"), url("fonts/BebasNeueBook.ttf") format("truetype"), url("fonts/BebasNeueBook.svg#BebasNeueBook") format("svg"); }
+
+@font-face {
+  font-family: 'BebasNeueBold';
+  src: url("fonts/BebasNeueBold.eot");
+  src: url("fonts/BebasNeueBold.eot") format("embedded-opentype"), url("fonts/BebasNeueBold.woff2") format("woff2"), url("fonts/BebasNeueBold.woff") format("woff"), url("fonts/BebasNeueBold.ttf") format("truetype"), url("fonts/BebasNeueBold.svg#BebasNeueBold") format("svg"); }
+
+@font-face {
+  font-family: 'BebasNeueLight';
+  src: url("fonts/BebasNeueLight.eot");
+  src: url("fonts/BebasNeueLight.eot") format("embedded-opentype"), url("fonts/BebasNeueLight.woff2") format("woff2"), url("fonts/BebasNeueLight.woff") format("woff"), url("fonts/BebasNeueLight.ttf") format("truetype"), url("fonts/BebasNeueLight.svg#BebasNeueLight") format("svg"); }
+
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url("fonts/BebasNeueRegular.eot");
+  src: url("fonts/BebasNeueRegular.eot") format("embedded-opentype"), url("fonts/BebasNeueRegular.woff2") format("woff2"), url("fonts/BebasNeueRegular.woff") format("woff"), url("fonts/BebasNeueRegular.ttf") format("truetype"), url("fonts/BebasNeueRegular.svg#BebasNeueRegular") format("svg"); }
+
+@font-face {
+  font-family: 'BebasNeueThin';
+  src: url("fonts/BebasNeueThin.eot");
+  src: url("fonts/BebasNeueThin.eot") format("embedded-opentype"), url("fonts/BebasNeueThin.woff2") format("woff2"), url("fonts/BebasNeueThin.woff") format("woff"), url("fonts/BebasNeueThin.ttf") format("truetype"), url("fonts/BebasNeueThin.svg#BebasNeueThin") format("svg"); }
+
+@font-face {
+  font-family: 'LoraRegular';
+  src: url("fonts/LoraRegular.eot");
+  src: url("fonts/LoraRegular.eot") format("embedded-opentype"), url("fonts/LoraRegular.woff2") format("woff2"), url("fonts/LoraRegular.woff") format("woff"), url("fonts/LoraRegular.ttf") format("truetype"), url("fonts/LoraRegular.svg#LoraRegular") format("svg"); }
+
+.bar-stable.bar.bar-header {
+  background-image: none;
+  border: none;
+  background: transparent; }
+
+.nav-bar-block, .title.title-center.header-item {
+  background-color: transparent;
+  color: transparent; }
+
+header {
+  text-align: center;
+  font-size: 35px;
+  color: #1c7f7e;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: bebasNeuebook; }
+
+.map-responsive {
+  position: relative;
+  top: -75px; }
+
+.batPigLogo {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  display: block; }
+
+button {
+  font-family: bebasNeueRegular; }
+  button.oncheck-success {
+    background: #1c7f7e;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px; }
+  button.oncheck-neutral {
+    background: transparent;
+    color: #1c7f7e;
+    font-size: 20px;
+    letter-spacing: 1px; }

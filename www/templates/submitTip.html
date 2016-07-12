@@ -1,36 +1,41 @@
 <ion-view view-title="Submit Tip">
+  <header>submit tip</header>
+  <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
+
   <form action="http://localhost:8080/tips" target="success" method="post" accept-charset="utf-8" name="form">
     <ion-content class="padding has-footer">
-
-      <input type="hidden" name="user_id" value=1/>
-      <input type="hidden" name="location_id" value=1/>
-      <input type="hidden" name="evidence" value={{evidence}}/>
-
-      <div align="center">
-        <h3 style="color:red;">Sample Restaurant</h3>
-        <p>123 Walnut St Wilmington DE 19801</p>
+      <div>
+        <br>
+        <h2>Bobs Burgers</h2>
+        <p class="location"><i class="icon marker-warn ion-ios-location"></i> Ocean Avenue</p>
       </div>
 
       <br>
-      <div align="center" style="border:1px solid black;">
+      <div>
         <input type="file" accept="image/*" id="picture" file-mode="myFile"/>
         <img height=35% width=35% id="thumbnail"/>
       </div>
 
       <br>
-      <div align="center">
-        <h5>What would you like to report?</h5>
+      <div>
 
-      <textarea name="message" placeholder="Enter a message" rows=16 cols=45 style="border:1px solid black"></textarea>
+      <textarea name="message" placeholder="Enter a message" rows=5 cols=45 ></textarea>
+
+
       </div>
+
+      <input type="hidden" name="evidence" id="evidence"/>
+      <input type="hidden" name="userid" value=1/>
+      <input type="hidden" name="locationid" value="Bobs Burgers"/>
+
       <iframe name="success" >You did it!</iframe>
+      <div class="row">
+        <button class="col col-50 button button-block oncheck-success" type="submit" on-tap="uploadFile()">Submit</button>
+          <button class="col col-50 button button-block oncheck-neutral" type="reset" on-tap="clear()">Clear</button>
+      </div>
     </ion-content>
 
-    <ion-footer-bar class="bar-subfooter padding">
-      <button class="button button-block" type="submit" on-tap="uploadFile()">Submit</button>
-    </ion-footer-bar>
-    <ion-footer-bar class="bar-footer padding">
-      <button class="button button-block" type="reset" on-tap="clear()">Clear</button>
-    </ion-footer-bar>
+
   </form>
+
 </ion-view>
