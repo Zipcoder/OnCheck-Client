@@ -1,0 +1,29 @@
+h2{
+  color:$warning;
+  font-family:bebasNeueBook;
+  margin-bottom:0px;
+}
+input#picture {
+  display: inline-block;
+  width: 100%;
+  padding: 120px 0 0 0;
+  height: 100px;
+  // overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url('../img/camera_icon.svg') center center no-repeat transparent;
+  border-radius: 20px;
+  background-size: 150px 100px;
+}
+img#thumbnail{
+  margin:auto;
+  display:block;
+}
+i.icon.marker-warn.ion-ios-location{
+  color:$warning;
+}
+i.icon.marker-warn.ion-ios-location, p.location{
+  font-family: bebasNeueBook;
+  font-size:$medium;
+}

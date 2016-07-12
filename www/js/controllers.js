@@ -69,14 +69,11 @@ angular.module('starter.controllers', [])
 
   //Displays Image after Uploaded
   document.getElementById("picture").onchange = function () {
+    document.getElementById("evidence").value = document.getElementById('picture').files[0].name;
     var reader = new FileReader();
 
     reader.onload = function (e) {
-
         document.getElementById("thumbnail").src = e.target.result;
-
-        var fileNameArray = document.getElementById('picture').value.split("\\");
-        $scope.evidence = fileNameArray[fileNameArray.length-1];
     };
     // read the image file as a data URL.
     reader.readAsDataURL(this.files[0]);
