@@ -54,26 +54,24 @@ angular.module('starter.controllers', [])
 
   $scope.evidence;
   $scope.restaurantInfo = [];
-  var location_id= "Mike's Crab Trap (S150790)32368 Long Neck Rd.";
+  var location_id= "Bush Charles W School101 Whitby Drive";
 
-  var restaurantSearchURL = "http://localhost:8080/restaurants/searchById/";
+  var restaurantSearchURL = "http://localhost:8080/restaurants/searchByID/";
 
   $http.get(restaurantSearchURL+location_id).then(function(response) {
     $scope.restaurantInfo = response.data;
       console.log($scope.restaurantInfo);
   });
-  console.log($scope.restaurantInfo);
-  //Displays Image after Uploaded
+
   document.getElementById("picture").onchange = function () {
     document.getElementById("evidence").value = document.getElementById('picture').files[0].name;
-    //document.getElementById("userid").value = 1;
-    //document.getElementById("locationid").value = "Derp";
+
     var reader = new FileReader();
 
     reader.onload = function (e) {
         document.getElementById("thumbnail").src = e.target.result;
     };
-    // read the image file as a data URL.
+
     reader.readAsDataURL(this.files[0]);
   };
 
@@ -81,6 +79,7 @@ angular.module('starter.controllers', [])
     document.getElementById("thumbnail").src = "";
   };
 
+  //Function to upload image to url
   $scope.uploadFile = function() {
     var file =  document.getElementById('picture').files[0];
 
@@ -103,8 +102,8 @@ angular.module('starter.controllers', [])
     $scope.userTips = response.data;
   });
 
-  $http.get(restaurantSearchURL+userTips.location_id).then(function(response) {
-    $scope.tipRestaurantInfo = response.data;
-  });
+  // $http.get(restaurantSearchURL+userTips.location_id).then(function(response) {
+  //   $scope.tipRestaurantInfo = response.data;
+  // });
 
 })
