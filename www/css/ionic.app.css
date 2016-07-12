@@ -9839,6 +9839,71 @@ a.tab-item-active {
   display: inline-block;
   font-size: 20px; }
 
+.search-bar {
+  padding: 10px 20px;
+  background: rgba(113, 127, 127, 0.62);
+  position: relative;
+  z-index: 3;
+  top: 30px; }
+  .search-bar input {
+    font-family: BebasNeueBook;
+    letter-spacing: 2px;
+    color: #38fffe;
+    border-bottom: 1px solid #38fffe;
+    background: none;
+    width: 90%; }
+
+.item.item-avatar img {
+  border-radius: 0px; }
+
+.list.card {
+  box-shadow: none;
+  border: 1px solid #717f7f;
+  margin: 5px 10px;
+  font-family: bebasNeueBook;
+  letter-spacing: 1px; }
+  .list.card:last-child {
+    margin-bottom: 10px; }
+  .list.card h2 {
+    font-family: bebasNeueBook;
+    color: #17607d;
+    font-size: 20px; }
+  .list.card .hours {
+    color: #d24d57; }
+  .list.card .miles {
+    display: inline;
+    padding-left: 40px; }
+  .list.card .sub-head {
+    display: inline; }
+
+h2 {
+  color: #d24d57;
+  font-family: bebasNeueBook;
+  margin-bottom: 0px; }
+
+input#picture {
+  display: inline-block;
+  width: 100%;
+  padding: 120px 0 0 0;
+  height: 100px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../img/camera_icon.svg") center center no-repeat transparent;
+  border-radius: 20px;
+  background-size: 150px 100px; }
+
+img#thumbnail {
+  margin: auto;
+  display: block; }
+
+i.icon.marker-warn.ion-ios-location {
+  color: #d24d57; }
+
+i.icon.marker-warn.ion-ios-location, p.location {
+  font-family: bebasNeueBook;
+  font-size: 20px; }
+
 @font-face {
   font-family: 'BebasNeueBook';
   src: url("fonts/BebasNeueBook.eot");
@@ -9872,3 +9937,44 @@ a.tab-item-active {
 #map-canvas {
   width: 100%;
   height: 100%; }
+
+.bar-stable.bar.bar-header {
+  background-image: none;
+  border: none;
+  background: transparent; }
+
+.nav-bar-block, .title.title-center.header-item {
+  background-color: transparent;
+  color: transparent; }
+
+header {
+  text-align: center;
+  font-size: 35px;
+  color: #1c7f7e;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: bebasNeuebook; }
+
+.map-responsive {
+  position: relative;
+  top: -75px; }
+
+.batPigLogo {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  display: block; }
+
+button {
+  font-family: bebasNeueRegular; }
+  button.oncheck-success {
+    background: #1c7f7e;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px; }
+  button.oncheck-neutral {
+    background: transparent;
+    color: #1c7f7e;
+    font-size: 20px;
+    letter-spacing: 1px; }
+

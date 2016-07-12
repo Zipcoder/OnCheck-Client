@@ -1,0 +1,16 @@
+.search-bar{
+  padding:10px 20px;
+  background:$glass;
+  position:relative;
+  z-index: 3;
+  top:30px;
+  input{
+    font-family: BebasNeueBook;
+    letter-spacing: 2px;
+    color:$CTA;
+    border-bottom: 1px solid $CTA;
+    background:none;
+    width:90%;
+
+  }
+}
