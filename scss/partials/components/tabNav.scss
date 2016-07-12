@@ -1,0 +1,25 @@
+
+.tab-nav.tabs{
+  background-color: $whitespace;
+  color:$base;
+}
+.tabs-positive > .tabs, .tabs.tabs-positive{
+  background-image: none;
+}
+a.tab-item{
+  border-top: 1px solid $secondary;
+  font-family:BebasNeueBook;
+  padding-top:10px;
+  // text-align: left;
+}
+a.tab-item-active{
+  border-top: 3px solid $CTA;
+  color: $CTA;
+}
+.tab-title{
+  font-size:$medium;
+}
+.tab-item .icon{
+  display: inline-block;
+  font-size:$medium;
+}
