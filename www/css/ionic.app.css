@@ -9936,7 +9936,9 @@ i.icon.marker-warn.ion-ios-location, p.location {
 
 #map-canvas {
   width: 100%;
-  height: 100%; }
+  height: 85%;
+  position: relative;
+  top: -75px; }
 
 .bar-stable.bar.bar-header {
   background-image: none;
@@ -9964,17 +9966,3 @@ header {
   z-index: 2;
   margin: 0 auto;
   display: block; }
-
-button {
-  font-family: bebasNeueRegular; }
-  button.oncheck-success {
-    background: #1c7f7e;
-    color: white;
-    font-size: 20px;
-    letter-spacing: 1px; }
-  button.oncheck-neutral {
-    background: transparent;
-    color: #1c7f7e;
-    font-size: 20px;
-    letter-spacing: 1px; }
-

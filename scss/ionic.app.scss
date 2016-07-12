@@ -85,10 +85,13 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
          url('fonts/LoraRegular.woff') format('woff'),
          url('fonts/LoraRegular.ttf') format('truetype'),
          url('fonts/LoraRegular.svg#LoraRegular') format('svg');
+}
 //Map Settings
 #map-canvas {
     width: 100%;
-    height: 100%;
+    height: 85%;
+    position:relative;
+    top:-75px;
 }
 .bar-stable.bar.bar-header{
   background-image: none;
@@ -117,19 +120,19 @@ header{
   margin:0 auto;
   display:block;
 }
-button{
-  font-family: bebasNeueRegular;
+// button{
+//   font-family: bebasNeueRegular;
 
-  &.oncheck-success{
-    background:$primary;
-    color:white;
-    font-size: $medium;
-    letter-spacing: 1px;
-  }
-  &.oncheck-neutral{
-    background:transparent;
-    color:$primary;
-    font-size: $medium;
-    letter-spacing: 1px;
-  }
-}
+//   &.oncheck-success{
+//     background:$primary;
+//     color:white;
+//     font-size: $medium;
+//     letter-spacing: 1px;
+//   }
+//   &.oncheck-neutral{
+//     background:transparent;
+//     color:$primary;
+//     font-size: $medium;
+//     letter-spacing: 1px;
+//   }
+// }
