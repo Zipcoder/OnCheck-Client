@@ -40,7 +40,7 @@ angular.module('starter.controllers', [])
     });
   }
     //Geocode 
-  var address ="6 Nicole Ct Newark, DE"; //Test address
+  var address ="201 E Delilah Rd Pleasantville, NJ"; //Test address
   $scope.geodata = {};
   $scope.queryResults = {};
   $scope.queryError = {};
