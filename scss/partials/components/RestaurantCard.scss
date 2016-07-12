@@ -1,0 +1,33 @@
+.item.item-avatar img{
+  border-radius:0px;
+}
+
+
+.list.card{
+  box-shadow:none;
+  border: 1px solid $base;
+  margin:5px 10px;
+    font-family: bebasNeueBook;
+  letter-spacing: 1px;
+  &:last-child{
+    margin-bottom: 10px;
+  }
+  h2{
+    font-family: bebasNeueBook;
+    color:$secondary;
+    font-size: $medium;
+  }
+  .cuisine{
+
+  }
+  .hours{
+    color:$warning;
+  }
+  .miles{
+    display:inline;
+    padding-left:40px;
+  }
+  .sub-head{
+    display:inline;
+  }
+}

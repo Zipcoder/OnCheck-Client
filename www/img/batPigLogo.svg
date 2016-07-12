@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="38px" viewBox="0 0 32 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sign-in" transform="translate(-172.000000, -80.000000)">
+            <g id="Group-3" transform="translate(172.000000, 80.000000)">
+                <g id="Group-2">
+                    <path d="M16.2524752,38 C24.851166,38 31.8217822,29.9111446 31.8217822,19.9330357 C31.8217822,15.087931 30.1782394,10.6882775 27.5028174,7.44386296 C24.66842,4.0066631 20.6758701,1.86607143 16.2524752,1.86607143 C7.65378446,1.86607143 0.683168317,9.95492686 0.683168317,19.9330357 C0.683168317,29.9111446 7.65378446,38 16.2524752,38 Z" id="Oval-20" fill="#A4AAB3"></path>
+                    <polygon id="Triangle-1" fill="#A4AAB3" points="6.23762376 0 9.6039604 11.1964286 2.87128713 11.1964286"></polygon>
+                    <polygon id="Triangle-1" fill="#A4AAB3" points="26.2376238 0 29.6039604 11.1964286 22.8712871 11.1964286"></polygon>
+                    <path d="M29.8019802,11.1964286 L23.0693069,11.1964286 L29.8019802,11.1964286 Z" id="Triangle-1" fill="#717F7F"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
