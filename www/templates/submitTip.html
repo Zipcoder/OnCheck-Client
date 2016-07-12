@@ -1,4 +1,4 @@
-<ion-view view-title="Submit Tip">
+<ion-view>
   <header>submit tip</header>
   <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
 
@@ -20,7 +20,7 @@
       <br>
       <div>
 
-      <textarea name="message" placeholder="Enter a message" rows=5 cols=45 ></textarea>
+      <textarea name="message" placeholder="Enter a message" rows=12 cols=50 ></textarea>
 
 
       </div>
@@ -29,11 +29,12 @@
       <input type="hidden" name="userId" value= 55 id="userId"/>
       <input type="hidden" name="locationId" value= "Mike's Crab Trap (S150790)32368 Long Neck Rd." id="locationId"/>
 
-      <iframe name="success" >You did it!</iframe>
+
       <div class="row">
         <button class="col col-50 button button-block oncheck-success" type="submit" on-tap="uploadFile()">Submit</button>
           <button class="col col-50 button button-block oncheck-neutral" type="reset" on-tap="clear()">Clear</button>
       </div>
+      <iframe name="success" style="display: none;" >You did it!</iframe>
     </ion-content>
 
 

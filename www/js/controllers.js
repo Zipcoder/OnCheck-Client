@@ -70,6 +70,7 @@ angular.module('starter.controllers', [])
 
     reader.onload = function (e) {
         document.getElementById("thumbnail").src = e.target.result;
+        document.getElementById("picture").style.display = "none";
     };
 
     reader.readAsDataURL(this.files[0]);
@@ -77,6 +78,7 @@ angular.module('starter.controllers', [])
 
   $scope.clear = function() {
     document.getElementById("thumbnail").src = "";
+    document.getElementById("picture").style.display = "inline-block";
   };
 
   //Function to upload image to url
