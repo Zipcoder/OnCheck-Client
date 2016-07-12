@@ -70,6 +70,7 @@ angular.module('starter.controllers', [])
 
     reader.onload = function (e) {
         document.getElementById("thumbnail").src = e.target.result;
+        document.getElementById("thumbnail").style.display = "block";
         document.getElementById("picture").style.display = "none";
     };
 
@@ -78,6 +79,7 @@ angular.module('starter.controllers', [])
 
   $scope.clear = function() {
     document.getElementById("thumbnail").src = "";
+    document.getElementById("thumbnail").style.display = "none";
     document.getElementById("picture").style.display = "inline-block";
   };
 

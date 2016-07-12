@@ -3,7 +3,7 @@
   <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
 
   <form action="http://localhost:8080/tips" target="success" method="post" accept-charset="utf-8" name="form">
-    <ion-content class="padding has-footer">
+    <ion-content class="padding">
       <div>
         <br>
         <h2>Bobs Burgers</h2>
@@ -14,21 +14,19 @@
       <div>
         <input type="file" accept="image/*" id="picture" file-mode="myFile"/>
         <br>
-        <img height=35% width=35% id="thumbnail"/>
+        <img width=90% id="thumbnail"/>
       </div>
 
       <br>
       <div>
 
-      <textarea name="message" placeholder="Enter a message" rows=12 cols=50 ></textarea>
-
+      <textarea name="message" placeholder="Enter a message" rows=12 style="width:100%;" ></textarea>
 
       </div>
 
       <input type="hidden" name="evidence" id="evidence"/>
       <input type="hidden" name="userId" value= 55 id="userId"/>
       <input type="hidden" name="locationId" value= "Mike's Crab Trap (S150790)32368 Long Neck Rd." id="locationId"/>
-
 
       <div class="row">
         <button class="col col-50 button button-block oncheck-success" type="submit" on-tap="uploadFile()">Submit</button>
