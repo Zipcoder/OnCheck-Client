@@ -6,8 +6,8 @@
     <ion-content class="padding">
       <div>
         <br>
-        <h2>Bobs Burgers</h2>
-        <p class="location"><i class="icon marker-warn ion-ios-location"></i> Ocean Avenue</p>
+        <h2>{{restaurantInfo.restaurantName}}</h2>
+        <p class="location"><i class="icon marker-warn ion-ios-location"></i>{{restaurantInfo.restaurantAddress}}- {{restaurantInfo.city}} {{restaurantInfo.zip}}</p>
       </div>
 
       <br>
@@ -26,7 +26,7 @@
 
       <input type="hidden" name="evidence" id="evidence"/>
       <input type="hidden" name="userId" value= 55 id="userId"/>
-      <input type="hidden" name="locationId" value= "Mike's Crab Trap (S150790)32368 Long Neck Rd." id="locationId"/>
+      <input type="hidden" name="locationId" id="locationId"/>
 
       <div class="row">
         <button class="col col-50 button button-block oncheck-success" type="submit" on-tap="uploadFile()">Submit</button>

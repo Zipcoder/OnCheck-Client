@@ -31,12 +31,12 @@ angular.module('starter.controllers', [])
       map: $scope.map,
       animation: google.maps.Animation.DROP,
       position: {lat: coords.latitude, lng: coords.longitude}
-    }); 
+    });
     var marker1 = new google.maps.Marker({
       map: $scope.map,
       animation: google.maps.Animation.DROP,
       position: {lat: $scope.latitude, lng: $scope.longitude}
-    });      
+    });
     var infoWindow = new google.maps.InfoWindow({
       content: "You are here!"
     });
@@ -44,13 +44,13 @@ angular.module('starter.controllers', [])
       infoWindow.open($scope.map, marker);
     });
   }
-    //Geocode 
+    //Geocode
   var address ="218 W Market St, Wilmington, DE 19804"; //Test address
   $scope.geodata = {};
   $scope.queryResults = {};
   $scope.queryError = {};
 
-  $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + 
+  $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' +
             address + '&key=AIzaSyBuxnmcLcZ4mTCW8fEIfVyBX-bZ4dC3l9U')
     .then(function(_results){
        console.log(_results.data);
@@ -58,7 +58,7 @@ angular.module('starter.controllers', [])
        $scope.geodata = $scope.queryResults[0].geometry;
        $scope.latitude = $scope.geodata.location.lat;
        $scope.longitude = $scope.geodata.location.lng;
-     }, 
+     },
      function error(_error){
         $scope.queryError = _error;
      })
@@ -114,13 +114,13 @@ angular.module('starter.controllers', [])
 
   $scope.evidence;
   $scope.restaurantInfo = [];
-  var location_id= "Bush Charles W School101 Whitby Drive";
+  var location_id= "2 Fat Guys American Grill701 Ace Memorial Drive";
+  document.getElementById("locationId").value = location_id;
 
   var restaurantSearchURL = "http://localhost:8080/restaurants/searchByID/";
 
   $http.get(restaurantSearchURL+location_id).then(function(response) {
     $scope.restaurantInfo = response.data;
-      console.log($scope.restaurantInfo);
   });
 
   document.getElementById("picture").onchange = function () {
