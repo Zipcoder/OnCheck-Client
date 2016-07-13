@@ -25,8 +25,7 @@ angular.module('starter.controllers', [])
 })
 .controller('myEatsCtrl', function($scope) {
   $scope.restaurants = ["McDonalds", "Cafe Napoli", "Wendy's", "Ole Tapas", "Shenanigan's"];
-  $scope.addMyEatsRestaurant = function() {
-      var restaurant = prompt("What restaurant?")
+  $scope.addMyEatsRestaurant = function(restaurant) {
       $scope.restaurants.unshift(restaurant);
       console.log($scope.restaurants);
   };
@@ -59,7 +58,6 @@ angular.module('starter.controllers', [])
             $http.get("http://localhost:8080/restaurants/searchByZip/"+$scope.zip).then(function(response) {
                 var max = response.data.length;
                 var number =  Math.floor(Math.random() * (max-1) + 1);
-                console.log(number);
                 console.log(response.data[number]);
                 $scope.restaurant = response.data[number];
             })
