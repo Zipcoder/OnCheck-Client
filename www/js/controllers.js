@@ -153,6 +153,8 @@ angular.module('starter.controllers', [])
     var uploadUrl = "http://localhost:8080/evidence/";
 
     fileUpload.uploadFileToUrl(file, uploadUrl);
+    document.getElementById("form").reset();
+    $scope.clear();
   };
 })
 
