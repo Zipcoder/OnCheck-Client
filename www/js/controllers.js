@@ -114,7 +114,7 @@ angular.module('starter.controllers', [])
 
   $scope.evidence;
   $scope.restaurantInfo = [];
-  var location_id= "2 Fat Guys American Grill701 Ace Memorial Drive";
+  var location_id= "Oak Orchard Diner2 Trading Post Plaza";
   document.getElementById("locationId").value = location_id;
 
   var restaurantSearchURL = "http://localhost:8080/restaurants/searchByID/";
@@ -166,10 +166,16 @@ angular.module('starter.controllers', [])
   var userTipsURL = "http://localhost:8080/tips/"+userId;
   $http.get(userTipsURL).then(function(response) {
     $scope.userTips = response.data;
+    console.log(response.data);
+
+    //for(i=0; i<$scope.userTips.length; i++) {
+      $http.get(restaurantSearchURL+$scope.userTips[0].locationId).then(function(response) {
+        $scope.userTips[i].restaurantInfo = response.data;
+        console.log(response.data);
+      });
+    //}
   });
 
-  // $http.get(restaurantSearchURL+userTips.location_id).then(function(response) {
-  //   $scope.tipRestaurantInfo = response.data;
-  // });
+
 
 })
