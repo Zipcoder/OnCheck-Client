@@ -1,0 +1,17 @@
+<ion-view>
+  <header>submitted tips</header>
+  <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
+  <ion-content class="has-header padding">
+    <div class= "card" ng-repeat="tip in userTips">
+
+      <img src="http://localhost:8080/evidence/{{tip.evidence}}" height="30%" width="30%" align="left" class="padding"/>
+      <h2>Bobs Burgers</h2>
+      <p class="location"><i class="icon marker-warn ion-ios-location"></i>conveniently located on Ocean Avenue</p>
+
+      <br>
+      <p class="padding">
+        {{tip.message}}
+      </p>
+    </div>
+  </ion-content>
+</ion-view>

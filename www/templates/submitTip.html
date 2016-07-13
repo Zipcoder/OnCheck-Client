@@ -1,9 +1,9 @@
-<ion-view view-title="Submit Tip">
+<ion-view>
   <header>submit tip</header>
   <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
 
-  <form action="http://localhost:8080/tips" target="success" method="post" accept-charset="utf-8" name="form">
-    <ion-content class="padding has-footer">
+  <form action="http://localhost:8080/tips" target="success" method="post" accept-charset="utf-8" name="form" id="form">
+    <ion-content class="padding">
       <div>
         <br>
         <h2>Bobs Burgers</h2>
@@ -13,26 +13,26 @@
       <br>
       <div>
         <input type="file" accept="image/*" id="picture" file-mode="myFile"/>
-        <img height=35% width=35% id="thumbnail"/>
+        <br>
+        <img width=90% id="thumbnail"/>
       </div>
 
       <br>
       <div>
 
-      <textarea name="message" placeholder="Enter a message" rows=5 cols=45 ></textarea>
-
+      <textarea name="message" placeholder="Enter a message" rows=12 style="width:100%;" ></textarea>
 
       </div>
 
       <input type="hidden" name="evidence" id="evidence"/>
-      <input type="hidden" name="userid" value=1/>
-      <input type="hidden" name="locationid" value="Bobs Burgers"/>
+      <input type="hidden" name="userId" value= 55 id="userId"/>
+      <input type="hidden" name="locationId" value= "Mike's Crab Trap (S150790)32368 Long Neck Rd." id="locationId"/>
 
-      <iframe name="success" >You did it!</iframe>
       <div class="row">
         <button class="col col-50 button button-block oncheck-success" type="submit" on-tap="uploadFile()">Submit</button>
           <button class="col col-50 button button-block oncheck-neutral" type="reset" on-tap="clear()">Clear</button>
       </div>
+      <iframe name="success" style="display: none;" >You did it!</iframe>
     </ion-content>
 
 
