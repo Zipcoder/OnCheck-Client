@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 <ion-view view-title="My Eats">
-    <ion-content ng-controller="myEatsCtrl" class="has-header">
-        <h1>My Eats</h1>
-          <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
+    <ion-content ng-controller="myEatsCtrl">
+        <header class="col">My Eats</header>
+        <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
         <ion-list show-reorder="data.showReorder">
             <ion-item ng-repeat="restaurant in restaurants">
                 {{restaurant}}
@@ -13,7 +12,7 @@
                 </ion-reorder-button>
             </ion-item>
         </ion-list>
-        <button class="button button-full button-calm" ng-click="data.showReorder = !data.showReorder">
+        <button class="button button-full oncheck-success" ng-click="data.showReorder = !data.showReorder">
             Reorder
         </button>
         <ng-restaurantcard></ng-restaurantcard>

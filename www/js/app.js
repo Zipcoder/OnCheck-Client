@@ -65,6 +65,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
             templateUrl: 'templates/analytics.html'
           }
         }
+    })
+    .state('app.restaurantView', {
+        url: '/restaurantView',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/restaurantView.html'
+            }
+        }
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/tabs');
