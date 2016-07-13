@@ -73,6 +73,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
                 templateUrl: 'templates/restaurantView.html'
             }
         }
+    })
     .state('app.user-tips', {
       url: '/user-tips',
       views: {

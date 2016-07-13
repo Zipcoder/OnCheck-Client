@@ -125,7 +125,6 @@ angular.module('starter.controllers', [])
             $http.get("http://localhost:8080/restaurants/searchByCity/"+$scope.city).then(function(response) {
                 var max = response.data.length;
                 var number =  Math.floor(Math.random() * (max-1) + 1);
-                console.log(number);
                 console.log(response.data[number]);
                 $scope.restaurant = response.data[number];
             })
