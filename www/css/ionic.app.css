@@ -9966,3 +9966,16 @@ header {
   z-index: 2;
   margin: 0 auto;
   display: block; }
+
+glossaryHeader {
+  font-size: 22px;
+  color: #1c7f7e;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: bebasNeuebook; }
+
+glossaryDetails {
+  font-size: 18px;
+  text-tansform: uppercase;
+  font-family: BebasNeueRegular;
+}

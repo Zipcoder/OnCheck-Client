@@ -54,7 +54,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
         url: '/glossary',
         views: {
           'menuContent': {
-            templateUrl: 'templates/glossary.html'
+            templateUrl: 'templates/glossary.html',
+            controller: 'glossaryCtrl'
           }
         }
     })
@@ -73,6 +74,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
         'menuContent': {
           templateUrl: 'templates/userTips.html',
           controller: 'userTipsCtrl'
+        }
+      }
+    })
+
+    .state('app.glossary-details', {
+      url: '/glossary-details',
+      cache: false,
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/glossaryDetails.html',
+          controller: 'glossaryDetailCtrl'
         }
       }
     });

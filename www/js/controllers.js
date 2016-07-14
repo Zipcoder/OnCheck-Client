@@ -161,21 +161,41 @@ angular.module('starter.controllers', [])
 .controller('userTipsCtrl', function($scope, $http) {
   $scope.userTips = [];
   $scope.tipRestaurantInfo = [];
-  var restaurantSearchURL = "http://localhost:8080/restaurants/searchById/";
+  var restaurantSearchURL = "http://localhost:8080/restaurants/searchByID/";
   var userId = "55";
   var userTipsURL = "http://localhost:8080/tips/"+userId;
   $http.get(userTipsURL).then(function(response) {
     $scope.userTips = response.data;
-    console.log(response.data);
 
-    //for(i=0; i<$scope.userTips.length; i++) {
-      $http.get(restaurantSearchURL+$scope.userTips[0].locationId).then(function(response) {
-        $scope.userTips[i].restaurantInfo = response.data;
-        console.log(response.data);
+
+    for(i=0; i<$scope.userTips.length; i++) {
+      $http.get(restaurantSearchURL+$scope.userTips[i].locationId).then(function(response) {
+        $scope.tipRestaurantInfo.push(response.data);
+        console.log($scope.tipRestaurantInfo);
       });
-    //}
+    }
+
+    //$scope.tipInfo = angular.merge({}, $scope.userTips, $scope.tipRestaurantInfo);
+    //console.log($scope.tipInfo);
+    console.log($scope.tipRestaurantInfo);
   });
 
+})
 
+.controller('glossaryCtrl', function($scope, $location, $http, glossary) {
+
+  $scope.setGlossaryContents = function(file) {
+    $http.get("../glossary/"+file).then(function(response) {
+      glossary.set(response.data);
+      console.log(response.data);
+      $location.path("/app/glossary-details");
+    });
+  }
+
+})
+
+.controller('glossaryDetailCtrl', function($scope, glossary) {
+
+  $scope.information = glossary.get();
 
 })

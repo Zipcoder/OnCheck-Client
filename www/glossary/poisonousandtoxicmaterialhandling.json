@@ -1,0 +1,14 @@
+[
+  {"code": "7-101", "text": "Poisonous or Toxic Material Labeling and Identification: Original Containers", "category": "handling"},
+  {"code": "7-102", "text": "Poisonous or Toxic Material Labeling and Identification: Working Containers"},
+  {"code": "7-201", "text": "Poisonous or Toxic Material Operational Supplies and Applications: Storage"},
+  {"code": "7-202", "text": "Poisonous or Toxic Material Operational Supplies and Applications: Presence and Use"},
+  {"code": "7-203", "text": "Poisonous or Toxic Material Operational Supplies and Applications: Container Prohibitions"},
+  {"code": "7-204", "text": "Poisonous or Toxic Material Operational Supplies and Applications: Chemicals"},
+  {"code": "7-205", "text": "Poisonous or Toxic Material Operational Supplies and Applications: Lubricants"},
+  {"code": "7-206", "text": "Poisonous or Toxic Material Operational Supplies and Applications: Pesticides"},
+  {"code": "7-207", "text": "Poisonous or Toxic Material Operational Supplies and Applications: Medicines"},
+  {"code": "7-208", "text": "Poisonous or Toxic Material Operational Supplies and Applications: First Aid Supplies"},
+  {"code": "7-209", "text": "Poisonous or Toxic Material Operational Supplies and Applications: Other Personal Care Items"},
+  {"code": "7-301", "text": "Poisonous or Toxic Material Stock and Retail Sale: Storage and Display"}
+]
