@@ -4,7 +4,8 @@
         <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
         <ion-list show-reorder="data.showReorder">
             <ion-item ng-repeat="restaurant in restaurants">
-                {{restaurant}}
+                <!-- <a class="button button-full list card" href="#/app/restaurantView">-->
+                <ng-Restaurantcard></ng-Restaurantcard>
                 <ion-option-button class="button-assertive" ng-click="deleteMyEatsRestaurant($index)">
                   Delete
                 </ion-option-button>
@@ -15,6 +16,5 @@
         <button class="button button-full oncheck-success" ng-click="data.showReorder = !data.showReorder">
             Reorder
         </button>
-        <ng-restaurantcard></ng-restaurantcard>
     </ion-content>
 </ion-view>

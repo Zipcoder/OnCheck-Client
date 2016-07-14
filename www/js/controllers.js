@@ -84,9 +84,12 @@ angular.module('starter.controllers', ['starter.services'])
   init();
 })
 .controller('myEatsCtrl', function($scope) {
-  $scope.restaurants = ["McDonalds", "Cafe Napoli", "Wendy's", "Ole Tapas", "Shenanigan's"];
+  $scope.restaurants = ["Cafe Napoli", "Arby's", "Ole Tapas", "Argilla"];
+  console.log($scope.restaurants);
   $scope.addMyEatsRestaurant = function(restaurant) {
+      console.log(restaurant);
       $scope.restaurants.unshift(restaurant);
+      console.log($scope.restaurants)
   };
   $scope.deleteMyEatsRestaurant = function(index) {
     $scope.restaurants.splice(index, 1);
