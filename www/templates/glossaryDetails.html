@@ -1,0 +1,12 @@
+<ion-view>
+  <header>Related Codes</header>
+  <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
+
+  <ion-content>
+    <div class="card padding" ng-repeat="codes in information">
+      <glossaryHeader>{{codes.code}}</glossaryHeader>
+      <br>
+      <glossaryDetails>{{codes.text}}</glossaryDetails>
+    </div>
+  </ion-content>
+</ion-view>

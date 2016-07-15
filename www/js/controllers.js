@@ -144,18 +144,19 @@ angular.module('starter.controllers', ['starter.services'])
     }
 })
 
-.controller('tipCtrl', function($scope, $http, fileUpload) {
+.controller('tipCtrl', function($scope, $http, fileUpload, restaurantData) {
 
   $scope.evidence;
-  $scope.restaurantInfo = [];
-  var location_id= "Bush Charles W School 101 Whitby Drive";
+  $scope.restaurantInfo = restaurantData.get();
+  console.log($scope.restaurantInfo);
+  var location_id= "Oak Orchard Diner2 Trading Post Plaza";
+  document.getElementById("locationId").value = location_id;
 
   var restaurantSearchURL = "http://localhost:8080/restaurants/searchByID/";
 
-  $http.get(restaurantSearchURL+location_id).then(function(response) {
-    $scope.restaurantInfo = response.data;
-      console.log($scope.restaurantInfo);
-  });
+  // $http.get(restaurantSearchURL+location_id).then(function(response) {
+  //   $scope.restaurantInfo = response.data;
+  // });
 
   document.getElementById("picture").onchange = function () {
     document.getElementById("evidence").value = document.getElementById('picture').files[0].name;
@@ -195,15 +196,40 @@ angular.module('starter.controllers', ['starter.services'])
 .controller('userTipsCtrl', function($scope, $http) {
   $scope.userTips = [];
   $scope.tipRestaurantInfo = [];
-  var restaurantSearchURL = "http://localhost:8080/restaurants/searchById/";
+  var restaurantSearchURL = "http://localhost:8080/restaurants/searchByID/";
   var userId = "55";
   var userTipsURL = "http://localhost:8080/tips/"+userId;
   $http.get(userTipsURL).then(function(response) {
     $scope.userTips = response.data;
+
+
+    for(i=0; i<$scope.userTips.length; i++) {
+      $http.get(restaurantSearchURL+$scope.userTips[i].locationId).then(function(response) {
+        $scope.tipRestaurantInfo.push(response.data);
+        console.log($scope.tipRestaurantInfo);
+      });
+    }
+
+    //$scope.tipInfo = angular.merge({}, $scope.userTips, $scope.tipRestaurantInfo);
+    //console.log($scope.tipInfo);
+    console.log($scope.tipRestaurantInfo);
   });
 
-  // $http.get(restaurantSearchURL+userTips.location_id).then(function(response) {
-  //   $scope.tipRestaurantInfo = response.data;
-  // });
+})
+
+.controller('glossaryCtrl', function($scope, $location, $http, glossary) {
+
+  $scope.setGlossaryContents = function(file) {
+    $http.get("../glossary/"+file).then(function(response) {
+      glossary.set(response.data);
+      $location.path("/app/glossary-details");
+    });
+  }
+
+})
+
+.controller('glossaryDetailCtrl', function($scope, glossary) {
+
+  $scope.information = glossary.get();
 
 })

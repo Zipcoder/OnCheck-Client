@@ -1,0 +1,21 @@
+[
+{"code": "5-101", "text": "Water: Source", "category": "handling"},
+{"code": "5-102", "text": "Water: Quality"},
+{"code": "5-103", "text": "Water: Quantity and Availability"},
+{"code": "5-104", "text": "Water: Distribution, Delivery, and Retention"},
+{"code": "5-201", "text": "Plumbing System: Materials"},
+{"code": "5-202", "text": "Plumbing System: Design, Construction, and Installation"},
+{"code": "5-203", "text": "Plumbing System: Numbers and Capacities"},
+{"code": "5-204", "text": "Plumbing System: Location and Placement"},
+{"code": "5-205", "text": "Plumbing System: Operation and Maintenance"},
+{"code": "5-301", "text": "Mobile Water Tank and Mobile Food Establishment Water Tank: Materials"},
+{"code": "5-302", "text": "Mobile Water Tank and Mobile Food Establishment Water Tank: Design and Construction"},
+{"code": "5-303", "text": "Mobile Water Tank and Mobile Food Establishment Water Tank: Numbers and Capacities"},
+{"code": "5-304", "text": "Mobile Water Tank and Mobile Food Establishment Water Tank: Operation and Maintenance"},
+{"code": "5-401", "text": "Sewage, Other Liquid Waster, and Rainwater: Mobile Holding Tank"},
+{"code": "5-402", "text": "Sewage, Other Liquid Waster, and Rainwater: Retention, Drainage, and Delivery"},
+{"code": "5-403", "text": "Sewage, Other Liquid Waster, and Rainwater: Disposal Facility"},
+{"code": "5-501", "text": "Refuse, Recyclables, and Returnables: Facilities on the Premises"},
+{"code": "5-502", "text": "Refuse, Recyclables, and Returnables: Removal"},
+{"code": "5-503", "text": "Refuse, Recyclables, and Returnables: Facilities for Disposal and Recycling"}
+]
