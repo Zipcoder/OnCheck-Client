@@ -4,10 +4,12 @@
         <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
         <div>
             <p>Name: {{restaurant.restaurantName}}</p>
-            <p>Address: {{restaurant.restaurantAddress}}{{restaurant.restaurantCity}}{{restaurant.zip}}</p>
-            <p>Last Inspection: {{restaurant.inspections.date}}</p>
-            <p>Violations: {{restaurant.inspections.violations}}</p>
+            <p>Address: {{restaurant.restaurantAddress}}, {{restaurant.city}} {{restaurant.zip}}</p>
             <p>Score: {{restaurant.onCheckScore}}</p>
+            <p>Violations: </p>
+        </div>
+        <div ng-repeat="inspection in restaurant.inspections">
+            {{inspection.violations}} on {{inspection.date}}
         </div>
         <div class="row" ng-controller="myEatsCtrl" >
             <button class="col col-33 button oncheck-success" ng-click="go('/app/submit-tip')">

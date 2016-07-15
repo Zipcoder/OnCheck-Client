@@ -84,7 +84,7 @@ angular.module('starter.controllers', ['starter.services'])
   init();
 })
 .controller('myEatsCtrl', function($scope) {
-  $scope.restaurants = ["Cafe Napoli", "Arby's", "Ole Tapas", "Argilla"];
+  $scope.restaurants = [{restaurantName: "Cafe Napoli"}, {restaurantName: "Arby's"}, {restaurantName: "Ole Tapas"}, {restaurantName: "Argilla"}];
   console.log($scope.restaurants);
   $scope.addMyEatsRestaurant = function(restaurant) {
       console.log(restaurant);
@@ -109,6 +109,27 @@ angular.module('starter.controllers', ['starter.services'])
     };
     $scope.setMyEats = function(list) {
         window.localStorage.setItem("myEatsList", list);
+    }
+})
+.controller('listResults', function($scope, $http, restaurantData) {
+    $scope.restaurants = [];
+    $scope.city = "";
+    $scope.zip = "";
+    $scope.listGenerate = function() {
+        if($scope.city == "") {
+            $http.get("http://localhost:8080/restaurants/searchByZip/"+$scope.zip).then(function(response) {
+                $scope.restaurants = response.data;
+                console.log(response.data);
+            })
+        } else {
+            $http.get("http://localhost:8080/restaurants/searchByCity/"+$scope.city).then(function(response) {
+                $scope.restaurants = response.data;
+                console.log(response.data);
+            })
+        }
+    };
+    $scope.setIt = function(restaurant) {
+        restaurantData.set(restaurant);
     }
 })
 .controller('rouletteCtrl', function($scope, $http, restaurantData) {
