@@ -151,17 +151,16 @@ angular.module('starter.controllers', ['starter.services'])
 .controller('tipCtrl', function($scope, $http, fileUpload, restaurantData) {
 
   $scope.evidence;
-  $scope.restaurantInfo = [];
-  console.log(restaurantData.get());
-
+  $scope.restaurantInfo = restaurantData.get();
+  console.log($scope.restaurantInfo);
   var location_id= "Oak Orchard Diner2 Trading Post Plaza";
   document.getElementById("locationId").value = location_id;
 
   var restaurantSearchURL = "http://localhost:8080/restaurants/searchByID/";
 
-  $http.get(restaurantSearchURL+location_id).then(function(response) {
-    $scope.restaurantInfo = response.data;
-  });
+  // $http.get(restaurantSearchURL+location_id).then(function(response) {
+  //   $scope.restaurantInfo = response.data;
+  // });
 
   document.getElementById("picture").onchange = function () {
     document.getElementById("evidence").value = document.getElementById('picture').files[0].name;

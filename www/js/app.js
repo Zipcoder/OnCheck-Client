@@ -41,6 +41,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
   })
   .state('app.submit-tip', {
       url: '/submit-tip',
+      cache: false,
       views: {
         'menuContent': {
           templateUrl: 'templates/submitTip.html',
@@ -67,6 +68,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
     })
     .state('app.restaurantView', {
         url: '/restaurantView',
+        cache: false,
         views: {
             'menuContent': {
                 templateUrl: 'templates/restaurantView.html'
