@@ -9966,3 +9966,16 @@ header {
   z-index: 2;
   margin: 0 auto;
   display: block; }
+
+button {
+  font-family: bebasNeueRegular; }
+  button.oncheck-success {
+    background: #1c7f7e;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px; }
+  button.oncheck-neutral {
+    background: transparent;
+    color: #1c7f7e;
+    font-size: 20px;
+    letter-spacing: 1px; }

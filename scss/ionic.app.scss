@@ -120,19 +120,19 @@ header{
   margin:0 auto;
   display:block;
 }
-// button{
-//   font-family: bebasNeueRegular;
+button{
+  font-family: bebasNeueRegular;
 
-//   &.oncheck-success{
-//     background:$primary;
-//     color:white;
-//     font-size: $medium;
-//     letter-spacing: 1px;
-//   }
-//   &.oncheck-neutral{
-//     background:transparent;
-//     color:$primary;
-//     font-size: $medium;
-//     letter-spacing: 1px;
-//   }
-// }
+  &.oncheck-success{
+    background:$primary;
+    color:white;
+    font-size: $medium;
+    letter-spacing: 1px;
+  }
+  &.oncheck-neutral{
+    background:transparent;
+    color:$primary;
+    font-size: $medium;
+    letter-spacing: 1px;
+  }
+}
