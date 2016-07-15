@@ -88,7 +88,7 @@ angular.module('starter.controllers', ['starter.services'])
   console.log($scope.restaurants);
   $scope.addMyEatsRestaurant = function(restaurant) {
       console.log(restaurant);
-      $scope.restaurants.unshift(restaurant);
+      $scope.restaurants.push(restaurant);
       console.log($scope.restaurants)
   };
   $scope.deleteMyEatsRestaurant = function(index) {
@@ -131,6 +131,14 @@ angular.module('starter.controllers', ['starter.services'])
             })
         }
     };
+    // $scope.resetDropDowns = function() {
+    //     if(angular.isDefined($scope.city)) {
+    //         reset $scope.city;
+    //     }
+    //     if(angular.isDefined($scope.zip)) {
+    //         delete $scope.zip;
+    //     }
+    // }
 })
 
 .controller('restaurantViewCtrl', function($scope, $location, restaurantData) {
