@@ -1,6 +1,266 @@
-<ion-view>
-<br>
-<br>
-<h1>this is not a roulette</h1>
-<p>it is just a tribute</p>
+<ion-view view-title="onCheck Roulette">
+    <ion-content ng-controller="rouletteCtrl">
+        <header class="col">Roulette</header>
+        <div>
+            <p class="blurb">
+                Welcome to onCheck Roulette, where we'll help you find a new and interesting place to eat. <br>Enter a city you'd like to check out and press "Let's Go!"
+            </p>
+        </div>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                What City?
+            </div>
+            <select ng-model="city">
+                <option value="">
+                    ---Select---
+                </option>
+                <option>
+                  Arden
+                </option>
+                <option>
+                  Bear
+                </option>
+                <option>
+                  Bethany Beach
+                </option>
+                <option>
+                  Camden
+                </option>
+                <option>
+                  Cheswold
+                </option>
+                <option>
+                  Claymont
+                </option>
+                <option>
+                  Delaware City
+                </option>
+                <option>
+                  Dewey Beach
+                </option>
+                <option>
+                  Dover
+                </option>
+                <option>
+                  Elsmere
+                </option>
+                <option>
+                  Frankford
+                </option>
+                <option>
+                  Georgetown
+                </option>
+                <option>
+                  Greenwood
+                </option>
+                <option>
+                  Glasgow
+                </option>
+                <option>
+                  Harbeson
+                </option>
+                <option>
+                  Hartly
+                </option>
+                <option>
+                  Hockessin
+                </option>
+                <option>
+                  Harrington
+                </option>
+                <option>
+                  Laurel
+                </option>
+                <option>
+                  Lewes
+                </option>
+                <option>
+                  Middletown
+                </option>
+                <option>
+                  Milford
+                </option>
+                <option>
+                  Millsboro
+                </option>
+                <option>
+                  New Castle
+                </option>
+                <option>
+                  Newark
+                </option>
+                <option>
+                  Newport
+                </option>
+                <option>
+                  Port Penn
+                </option>
+                <option>
+                  Rehoboth Beach
+                </option>
+                <option>
+                  Selbyville
+                </option>
+                <option>
+                  Seaford
+                </option>
+                <option>
+                  Smyrna
+                </option>
+                <option>
+                  Wilmington
+                </option>
+            </select>
+        </label>
+        <div>
+            <p class="blurb">Or</p>
+        </div>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                What Zipcode?
+            </div>
+            <select ng-model="zip">
+                <option value="">
+                    ---Select---
+                </option>
+                <option>
+                    19701
+                </option>
+                <option>
+                    19702
+                </option>
+                <option>
+                    19703
+                </option>
+                <option>
+                    19706
+                </option>
+                <option>
+                    19707
+                </option>
+                <option>
+                    19709
+                </option>
+                <option>
+                    19711
+                </option>
+                <option>
+                    19713
+                </option>
+                <option>
+                    19718
+                </option>
+                <option>
+                    19720
+                </option>
+                <option>
+                    19731
+                </option>
+                <option>
+                    19801
+                </option>
+                <option>
+                    19802
+                </option>
+                <option>
+                    19803
+                </option>
+                <option>
+                    19804
+                </option>
+                <option>
+                    19805
+                </option>
+                <option>
+                    19806
+                </option>
+                <option>
+                    19808
+                </option>
+                <option>
+                    19809
+                </option>
+                <option>
+                    19810
+                </option>
+                <option>
+                    19850
+                </option>
+                <option>
+                    19899
+                </option>
+                <option>
+                    19901
+                </option>
+                <option>
+                    19904
+                </option>
+                <option>
+                    19930
+                </option>
+                <option>
+                    19934
+                </option>
+                <option>
+                    19936
+                </option>
+                <option>
+                    19945
+                </option>
+                <option>
+                    19947
+                </option>
+                <option>
+                    19950
+                </option>
+                <option>
+                    19951
+                </option>
+                <option>
+                    19952
+                </option>
+                <option>
+                    19953
+                </option>
+                <option>
+                    19956
+                </option>
+                <option>
+                    19958
+                </option>
+                <option>
+                    19960
+                </option>
+                <option>
+                    19963
+                </option>
+                <option>
+                    19966
+                </option>
+                <option>
+                    19971
+                </option>
+                <option>
+                    19973
+                </option>
+                <option>
+                    19975
+                </option>
+                <option>
+                    19977
+                </option>
+                <option>
+                    90245
+                </option>
+            </select>
+        </label>
+        <button class="button button-block oncheck-success" ng-click="roulette()">
+            Let's Go!
+        </button>
+        <a class="button button-block button-stable" href="#/app/restaurantView">
+            {{restaurant.restaurantName}}
+            <br>
+            {{restaurant.restaurantAddress}}
+        </a>
+    </ion-content>
 </ion-view>

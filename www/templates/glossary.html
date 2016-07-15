@@ -1,5 +1,75 @@
-<ion-view view-title="Glossary">
+<ion-view>
+  <header>glossary</header>
+  <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
   <ion-content class="padding">
-    <h1>Glossary</h1>
+
+    <button class="button-block" on-tap="setGlossaryContents('management.json')">
+      <div class="row">
+        <div class="col-15 padding glossaryIcon"><i class="icon ion-person-stalker"></i></div>
+        <div class="col-85 padding" align="left">
+          <glossaryHeader>Management</glossaryHeader>
+        </div>
+      </div>
+    </button>
+
+    <br>
+
+    <button class="button-block button-light" on-tap="setGlossaryContents('personnelhealthandcleanliness.json')">
+      <div class="row">
+        <div class="col-15 padding glossaryIcon"><i class="icon ion-android-contact"></i></div>
+        <div class="col-85 padding" align="left">
+          <glossaryHeader>Personell Health/Cleanliness</glossaryHeader>
+        </div>
+      </div>
+    </button>
+
+    <br>
+
+    <button class="button-block button-light" on-tap="setGlossaryContents('foodspecificationsandhandling.json')">
+      <div class="row">
+        <div class="col-15 padding glossaryIcon"><i class="icon ion-android-restaurant"></i></div>
+        <div class="col-85 padding" align="left">
+          <glossaryHeader>Food Specification and Handling</glossaryHeader>
+        </div>
+      </div>
+
+    </button>
+    <br>
+    <button class="button-block button-light" on-tap="setGlossaryContents('cleaningandsanitationofequipment.json')">
+      <div class="row">
+        <div class="col-15 padding glossaryIcon"><i class="icon ion-wand"></i></div>
+        <div class="col-85 padding" align="left">
+          <glossaryHeader>Cleaning and Sanitization of equipment</glossaryHeader>
+        </div>
+      </div>
+    </button>
+    <br>
+    <button class="button-block button-light" on-tap="setGlossaryContents('waterplumbingandwaste.json')">
+      <div class="row">
+        <div class="col-15 padding glossaryIcon"><i class="icon ion-paintbucket"></i></div>
+        <div class="col-85 padding" align="left">
+          <glossaryHeader>Water, Plumbing, and Waste</glossaryHeader>
+        </div>
+      </div>
+    </button>
+    <br>
+    <button class="button-block button-light" on-tap="setGlossaryContents('establishmentcomplianceandenforcement.json')">
+      <div class="row">
+        <div class="col-15 padding glossaryIcon"><i class="icon ion-star"></i></div>
+        <div class="col-85 padding" align="left">
+          <glossaryHeader>Establishment Compliance and enforcement</glossaryHeader>
+        </div>
+      </div>
+    </button>
+    <br>
+    <button class="button-block button-light" on-tap="setGlossaryContents('poisonousandtoxicmaterialhandling.json')">
+      <div class="row">
+        <div class="col-15 padding glossaryIcon"><i class="icon ion-soup-can-outline"></i></div>
+        <div class="col-85 padding" align="left">
+          <glossaryHeader>Toxic Material Handling</glossaryHeader>
+        </div>
+      </div>
+    </button>
+
   </ion-content>
 </ion-view>

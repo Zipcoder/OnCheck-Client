@@ -30,7 +30,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
     abstract: true,
     templateUrl: 'templates/menu.html',
   })
-
   .state('app.tabs', {
     url: '/tabs',
     views: {
@@ -40,9 +39,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
       }
     }
   })
-
   .state('app.submit-tip', {
       url: '/submit-tip',
+      cache: false,
       views: {
         'menuContent': {
           templateUrl: 'templates/submitTip.html',
@@ -54,7 +53,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
         url: '/glossary',
         views: {
           'menuContent': {
-            templateUrl: 'templates/glossary.html'
+            templateUrl: 'templates/glossary.html',
+            controller: 'glossaryCtrl'
           }
         }
     })
@@ -66,13 +66,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
           }
         }
     })
-
+    .state('app.restaurantView', {
+        url: '/restaurantView',
+        cache: false,
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/restaurantView.html'
+            }
+        }
+    })
     .state('app.user-tips', {
       url: '/user-tips',
       views: {
         'menuContent': {
           templateUrl: 'templates/userTips.html',
           controller: 'userTipsCtrl'
+        }
+      }
+    })
+
+    .state('app.glossary-details', {
+      url: '/glossary-details',
+      cache: false,
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/glossaryDetails.html',
+          controller: 'glossaryDetailCtrl'
         }
       }
     });

@@ -1,19 +1,19 @@
-<ion-view title="myEats">
-    <ion-content>
-
-        <header>my Eats</header>
+<ion-view view-title="My Eats">
+    <ion-content ng-controller="myEatsCtrl">
+        <header class="col">My Eats</header>
         <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
-        <ion-list ng-controller="myEatsCtrl" show-reorder="true" show-delete="shouldShowDelete">
+        <ion-list show-reorder="data.showReorder">
             <ion-item ng-repeat="restaurant in restaurants">
-                <ion-delete-button class="ion-minus-circled" ng-click="deleteMyEatsRestaurant($index)"></ion-delete-button>
-                {{restaurant}}
+                <ng-Restaurantcard></ng-Restaurantcard>
+                <ion-option-button class="button-assertive" ng-click="deleteMyEatsRestaurant($index)">
+                  Delete
+                </ion-option-button>
                 <ion-reorder-button class="ion-navicon" on-reorder="moveRestaurant(restaurant, $fromIndex, $toIndex)">
                 </ion-reorder-button>
             </ion-item>
         </ion-list>
-        <ion-toggle ng-model="shouldShowDelete">
-          Show Delete?
-        </ion-toggle>
-        <ng-restaurantcard></ng-restaurantcard>
+        <button class="button button-full oncheck-success" ng-click="data.showReorder = !data.showReorder">
+            Reorder
+        </button>
     </ion-content>
 </ion-view>

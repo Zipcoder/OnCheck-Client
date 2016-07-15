@@ -1,0 +1,24 @@
+<ion-view view-title="Restaurant">
+    <ion-content ng-controller="restaurantViewCtrl">
+        <header class="col">Restaurant</header>
+        <img src="img/batPigLogo.svg" class="batPigLogo" alt="">
+        <div>
+            <p>Name: {{restaurant.restaurantName}}</p>
+            <p>Address: {{restaurant.restaurantAddress}}{{restaurant.restaurantCity}}{{restaurant.restaurantZip}}</p>
+            <p>Last Inspection: {{restaurant.inspections.date}}</p>
+            <p>Violations: {{restaurant.inspections.violations}}</p>
+            <p>Score: {{restaurant.onCheckScore}}</p>
+        </div>
+        <div class="row" ng-controller="myEatsCtrl" >
+            <button class="col col-33 button oncheck-success" ng-click="go('/app/submit-tip')">
+                Submit Tip
+            </button>
+            <button class="col col-66 button oncheck-neutral" ng-click="addMyEatsRestaurant('{{restaurant.restaurantName}}')">
+                Add to My Eats
+            </button>
+        </div>
+        <button class="button button-full oncheck-success" ng-click="">
+            Map to Location
+        </button>
+    </ion-content>
+</ion-view>

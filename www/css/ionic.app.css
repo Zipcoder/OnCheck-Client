@@ -9979,3 +9979,16 @@ button {
     color: #1c7f7e;
     font-size: 20px;
     letter-spacing: 1px; }
+
+glossaryHeader {
+  font-size: 22px;
+  color: #1c7f7e;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: bebasNeuebook; }
+
+glossaryDetails {
+  font-size: 18px;
+  text-tansform: uppercase;
+  font-family: BebasNeueRegular;
+}
