@@ -187,7 +187,6 @@ angular.module('starter.controllers', [])
   $scope.setGlossaryContents = function(file) {
     $http.get("../glossary/"+file).then(function(response) {
       glossary.set(response.data);
-      console.log(response.data);
       $location.path("/app/glossary-details");
     });
   }
