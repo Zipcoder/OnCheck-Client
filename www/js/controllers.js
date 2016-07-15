@@ -4,7 +4,7 @@ angular.module('starter.controllers', ['starter.services'])
     function mapInit(coords){
       var mapOptions = {
         center: { lat: coords.latitude, lng: coords.longitude},
-        zoom: 12,
+        zoom: 15,
         styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}],
         streetViewControl: false,
         mapTypeControl: false,
@@ -115,9 +115,7 @@ angular.module('starter.controllers', ['starter.services'])
     $scope.city = "";
     $scope.zip = "";
     $scope.roulette = function() {
-        if($scope.city == "" && $scope.zip == "") {
-            $scope.restaurant = {restaurantName:"No Area Specified", restaurantAddress: "Please Enter a City or a Zipcode"}
-        } else if($scope.city == "") {
+        if($scope.city == "") {
             $http.get("http://localhost:8080/restaurants/searchByZip/"+$scope.zip).then(function(response) {
                 var max = response.data.length;
                 var number =  Math.floor(Math.random() * (max-1) + 1);
