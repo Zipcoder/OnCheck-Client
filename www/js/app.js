@@ -32,6 +32,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
   })
   .state('app.tabs', {
     url: '/tabs',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/tabNav.html',
@@ -66,6 +67,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
     })
     .state('app.restaurantView', {
         url: '/restaurantView',
+        cache: false,
         views: {
             'menuContent': {
                 templateUrl: 'templates/restaurantView.html'

@@ -115,12 +115,15 @@ angular.module('starter.controllers', ['starter.services'])
     $scope.city = "";
     $scope.zip = "";
     $scope.roulette = function() {
-        if($scope.city == "") {
+        if($scope.city == "" && $scope.zip == "") {
+            $scope.restaurant = {restaurantName:"No Area Specified", restaurantAddress: "Please Enter a City or a Zipcode"}
+        } else if($scope.city == "") {
             $http.get("http://localhost:8080/restaurants/searchByZip/"+$scope.zip).then(function(response) {
                 var max = response.data.length;
                 var number =  Math.floor(Math.random() * (max-1) + 1);
                 $scope.restaurant = response.data[number];
                 restaurantData.set(response.data[number]);
+                console.log(response.data[number]);
             })
         } else {
             $http.get("http://localhost:8080/restaurants/searchByCity/"+$scope.city).then(function(response) {
@@ -128,17 +131,10 @@ angular.module('starter.controllers', ['starter.services'])
                 var number =  Math.floor(Math.random() * (max-1) + 1);
                 $scope.restaurant = response.data[number];
                 restaurantData.set(response.data[number]);
+                console.log(response.data[number]);
             })
         }
     };
-    // $scope.resetDropDowns = function() {
-    //     if(angular.isDefined($scope.city)) {
-    //         reset $scope.city;
-    //     }
-    //     if(angular.isDefined($scope.zip)) {
-    //         delete $scope.zip;
-    //     }
-    // }
 })
 
 .controller('restaurantViewCtrl', function($scope, $location, restaurantData) {
