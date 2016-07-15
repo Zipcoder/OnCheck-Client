@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['starter.services'])
 .controller('browseCtrl', function($scope, $cordovaGeolocation, $http){
     //Initializes the map
     function mapInit(coords){
@@ -84,10 +84,12 @@ angular.module('starter.controllers', [])
   init();
 })
 .controller('myEatsCtrl', function($scope) {
-  $scope.restaurants = ["Taco Hell", "WacDonalds", "Dairy Despot", "Burger Czar", "Shit-Hole Denny's"];
+  $scope.restaurants = ["Cafe Napoli", "Arby's", "Ole Tapas", "Argilla"];
+  console.log($scope.restaurants);
   $scope.addMyEatsRestaurant = function(restaurant) {
+      console.log(restaurant);
       $scope.restaurants.unshift(restaurant);
-      console.log($scope.restaurants);
+      console.log($scope.restaurants)
   };
   $scope.deleteMyEatsRestaurant = function(index) {
     $scope.restaurants.splice(index, 1);
@@ -109,13 +111,45 @@ angular.module('starter.controllers', [])
         window.localStorage.setItem("myEatsList", list);
     }
 })
+.controller('rouletteCtrl', function($scope, $http, restaurantData) {
+    $scope.city = "";
+    $scope.zip = "";
+    $scope.roulette = function() {
+        if($scope.city == "") {
+            $http.get("http://localhost:8080/restaurants/searchByZip/"+$scope.zip).then(function(response) {
+                var max = response.data.length;
+                var number =  Math.floor(Math.random() * (max-1) + 1);
+                $scope.restaurant = response.data[number];
+                restaurantData.set(response.data[number]);
+            })
+        } else {
+            $http.get("http://localhost:8080/restaurants/searchByCity/"+$scope.city).then(function(response) {
+                var max = response.data.length;
+                var number =  Math.floor(Math.random() * (max-1) + 1);
+                $scope.restaurant = response.data[number];
+                restaurantData.set(response.data[number]);
+            })
+        }
+    };
+})
+
+.controller('restaurantViewCtrl', function($scope, $location, restaurantData) {
+    $scope.restaurant = restaurantData.get();
+    $scope.go = function(path) {
+        $location.path(path);
+    }
+})
 
 .controller('tipCtrl', function($scope, $http, fileUpload) {
 
   $scope.evidence;
   $scope.restaurantInfo = [];
+<<<<<<< HEAD
   var location_id= "Oak Orchard Diner2 Trading Post Plaza";
   document.getElementById("locationId").value = location_id;
+=======
+  var location_id= "Bush Charles W School 101 Whitby Drive";
+>>>>>>> roulette
 
   var restaurantSearchURL = "http://localhost:8080/restaurants/searchByID/";
 

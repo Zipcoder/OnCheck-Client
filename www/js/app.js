@@ -30,7 +30,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
     abstract: true,
     templateUrl: 'templates/menu.html',
   })
-
   .state('app.tabs', {
     url: '/tabs',
     views: {
@@ -40,7 +39,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
       }
     }
   })
-
   .state('app.submit-tip', {
       url: '/submit-tip',
       views: {
@@ -67,7 +65,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
           }
         }
     })
-
+    .state('app.restaurantView', {
+        url: '/restaurantView',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/restaurantView.html'
+            }
+        }
+    })
     .state('app.user-tips', {
       url: '/user-tips',
       views: {
