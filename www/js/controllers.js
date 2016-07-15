@@ -140,16 +140,14 @@ angular.module('starter.controllers', ['starter.services'])
     }
 })
 
-.controller('tipCtrl', function($scope, $http, fileUpload) {
+.controller('tipCtrl', function($scope, $http, fileUpload, restaurantData) {
 
   $scope.evidence;
   $scope.restaurantInfo = [];
-<<<<<<< HEAD
+  console.log(restaurantData.get());
+
   var location_id= "Oak Orchard Diner2 Trading Post Plaza";
   document.getElementById("locationId").value = location_id;
-=======
-  var location_id= "Bush Charles W School 101 Whitby Drive";
->>>>>>> roulette
 
   var restaurantSearchURL = "http://localhost:8080/restaurants/searchByID/";
 
